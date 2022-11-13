@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- meta tags provide metadata(data that discribes data) for SEO -->
+    <!-- tells browser characters are of UTF-8 (most common character encoding.) ASCII standards -->
+    <meta charset="UTF-8">
+    <!-- Edge mode tells Internet Explorer to display content in the highest mode available.  -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- make your website responsive by adjusting width to device width.  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- to write our own discription which gets displayed on search engines written in content part -->
+    <meta name="description" content="discription of website">
+    <!-- help user to reach our website -->
+    <meta name="keywords" content="web 3.0, blockchain, JavaScipt blog">
+    <!-- if you want search engines & bots to rank a website and follow  links inside webpage -->
+    <meta name="robots" content="INDEX, FOLLOW"> 
+    <!-- to stop website from ranking and not get into results of search engines  -->
+    <meta name="robots" content="NOINDEX, NOFOLLOW"> 
+
+    <title>Gets rendered on browser's tab</title>
+    <!-- specifies the base URL to use for all relative URLs in a document -->
+    <base href="./images/">
+
+    <!-- to include external CSS (stylesheet)-->
+    <link rel="stylesheet" href="fileName.css">
+    <!-- apply css to  to the contents of the document containing the <style> element eg. all paragraps will have green text-->
+    <style>
+        p {
+          color: #26b72b;
+        }
+    </style>
+
+    <!-- to include external JavaScipt -->
+    <script src="fileName.js"></script>
+    <!-- if JS is turned off or not supported by browser  -->
+    <noscript> <p>please enable JavaScipt</p> </noscript>
+</head>
+<body>
+
+    <!-- becz of style tag in head Para has green text -->
+    <p>Para has green text: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam corrupti saepe rem harum dolore autem modi eligendi totam nam.</p> 
+
+    <!-- becz of base tag in head src attributes points to "./images/hustle.jpg" -->
+    <img src="../../head -Meta,base, Title, link, Script, style etc/images/hustle.jpg" alt="keep grinding" width="800">
+</body>
+</html>

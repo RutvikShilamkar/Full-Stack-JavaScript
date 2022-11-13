@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blockquote, quote,cite, Bdo</title>
+</head>
+<body>
+    <p>
+        Avian carriers can provide high delay, low throughput, and low altitude
+        service. The connection topology is limited to a single point-to-point path
+        for each carrier, used with standard carriers, but many carriers can be used
+        without significant interference with each other, outside early spring.
+        This is because of the 3D ether space available to the carriers, in contrast
+        to the 1D ether used by IEEE802.3. The carriers have an intrinsic collision
+        avoidance system, which increases availability.
+      </p>
+      <hr>
+      <h2>for long quotations use the blockquote</h2>
+      <!-- 1) The <blockquote> HTML element indicates that the enclosed text is an extended quotation.
+          2) Usually, this is rendered visually by indentation
+          3)A URL for the source of the quotation may be given using the cite attribute
+          4) text representation of the source can be given using the <cite> element. -->
+    <blockquote cite="https://datatracker.ietf.org/doc/html/rfc1149">
+        <p>
+          Avian carriers can provide high delay, low throughput, and low altitude
+          service. The connection topology is limited to a single point-to-point path
+          for each carrier, used with standard carriers, but many carriers can be used
+          without significant interference with each other, outside early spring.
+          This is because of the 3D ether space available to the carriers, in contrast
+          to the 1D ether used by IEEE802.3. The carriers have an intrinsic collision
+          avoidance system, which increases availability.
+        </p>
+        <cite>-Brave New World (using cite tag)</cite>
+      </blockquote>
+      <p><b>Cite attribute: </b>gives information about content inside blockquote in terms of message or by providing url to source document</p>
+
+      <hr>
+      <h2> for short quotations use the q tag. Modern browsers will inclose it in double quotes </h2>
+      <p>When Dave asks HAL to open the pod bay door, HAL answers: <q cite="https://www.imdb.com/title/tt0062622/quotes/qt0396921">I am sorry, Dave. I am afraid I can't do that.</q></p>
+      
+      
+      <hr>
+      <!-- element overrides the current directionality of text, so that the text within is rendered in a different direction. -->
+      <h2>About Bidirectional Text Override element (bdo tag) </h2>
+      <p> without bdo tag The English song "Oh I do like to be beside the seaside"</p>
+      <!-- bdo with dir = ltr results in no change -->
+      <p>The English song <bdo dir="ltr"> "Oh I do like to be beside the seaside"</bdo></p>
+
+      <!-- characters from right are rendered -->
+      <p>The English song <bdo dir="rtl"> "Oh I do like to be beside the seaside"</bdo></p>
+</body>
+</html>

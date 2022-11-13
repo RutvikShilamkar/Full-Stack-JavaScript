@@ -1,0 +1,14 @@
+tab
+
+ctrl + enter : to insert line below
+ctrl + shift + enter : to insert line up
+
+p*4 : for p tags
+
+Courser:
+ctrl + D : selects the word at the cursor, or the next occurrence of the current selection
+Ctrl+Shift+L :add cursor at each occurrence of the current selected text
+
+alt + up/down : to move line
+
+shift + alt + up/down : copy line up/down

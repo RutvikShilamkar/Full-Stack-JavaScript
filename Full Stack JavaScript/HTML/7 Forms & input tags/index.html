@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms & Input Tags</title>
+</head>
+
+<body>
+    <form action="backendOfApplication.java">
+        <div>
+            <label for="find">Search</label>
+            <input type="search" name="lookup" id="find"><br> <br>
+            <label for="empName">Name: </label>
+            <input type="text" name="empName" id="empName"><br>
+            <label for="email">Email:</label>
+            <input type="email" name="eml" id="email"><br>
+            <label for="url">Linkedin Profile:</label>
+            <input type="url" name="linkiedin" id="url"><br>
+            <label for="grades">CGPA: </label>
+            <input type="number" name="cgpa" id="grades"><br>
+            <label for="range">How likely you want do masters?</label>
+            <input type="range" name="prob" id="range"> <br>
+            <label for="dob">Date of Birth:</label>
+            <input type="date" name="birth" id="dob"> <br>
+            <label for="col">Fav color:</label>
+            <input type="color" name="color" id="col">
+        </div>
+        <br>
+        <div>
+            <label for="course">Course type:</label>
+            <label for="MS">MS</label>
+            <input type="radio" name="course" value="MS" id="MS" checked> 
+            <label for="BE">BE</label>
+            <input type="radio" name="course" value="BE" id="BE">
+            <label for="Other">Other</label>
+            <input type="radio" name="course" value="Ot" id="Other">
+        </div>
+        <br>
+        <div>
+            <label for="state">Select State: </label>
+            <select name="state" id="state">
+                <option value="">--Please choose an option--</option>
+                <option value="cal">California</option>
+                <option value="tex">Texas</option>
+                <option value="Flo">Florida</option>
+            </select>
+        </div>
+        <div>
+            <label for="colleges">Select college :</label> <br>
+            <select name="clg" id="colleges" size="3">
+                <option value="">--Please choose an option--</option>
+                <option value="abc">abc</option>
+                <option value="def">def</option>
+                <option value="ghi">ghi</option>
+                <option value="lmo">lmo</option>
+                <option value="pqr">pqr</option>
+            </select>
+        </div>
+        <br>
+        <div>
+            <label for="student">Student Type:</label>
+            <label for="intStd">International Student</label>
+            <input type="checkbox" name="stdType" value="international" id="intStd">
+        </div>
+        <div>
+            <label for="elgbility">Eligiblity:</label>
+            <label for="elg">Eligibility Passed?</label>
+            <input type="checkbox" name="elgbility" value="True" id="elg" checked>
+        </div>
+        <br>
+        <div>
+            <label for="essay">Tell us why you want to do masters in 250 words:</label><br>
+            <textarea name="uniEssay" id="essay" cols="60" rows="10"></textarea>
+        </div>
+        <br>
+        <div>
+            <input type="reset" value="Reset Form">
+            <input type="submit" value="Submit Changes">
+        </div>
+        <br>
+        <div>
+            <label for="sub">Submit Button with image as background : </label>
+            <input type="image" src="./img.jpg" alt="submit image error" width="80" height="20">
+        </div>
+    </form>
+</body>
+
+</html>

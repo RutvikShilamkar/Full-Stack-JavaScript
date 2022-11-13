@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lists & Tables</title>
+</head>
+<body>
+    <h2>Lists</h2>
+    <ul type = "square ">
+        <li>unordered list item 1</li>
+        <li>unordered list item 2</li>
+        <ol type="i">
+            <li>nested ordered list item 1</li>
+            <li>nested ordered list item 2</li>
+            <li>nested ordered list item 3</li>
+        </ol>
+        <li>unordered list item 3</li>
+        <li>unordered list item 4</li>
+    </ul>
+    <hr>
+    <ol type="a">
+        <li>ordered list item 1</li>
+        <li>ordered list item 2</li>
+        <li>ordered list item 3</li>
+        <li>ordered list item 4</li>
+    </ol>
+    <hr><hr><hr>
+    <h2>Table</h2>
+    <table border="solid" cellpadding="10" cellspacing="0">
+        <thead>
+            <th>Time</th>
+            <th>Monday</th>
+            <th>Tuesday</th>
+            <th>Wednesday</th>
+            <th>Thursday</th>
+            <th>Friday</th>
+            <th>Saturday</th>
+        </thead>
+        <tbody>
+            <tr align="center">
+                <td>00:00am</td>
+                <td>Science</td>
+                <td>Maths</td>
+                <td>History</td>
+                <td>Geography</td>
+                <td>PT</td>
+                <td>Physics</td>
+            </tr>
+            <tr align="center">
+                <td>00:00am</td>
+                <td>PT</td>
+                <td>Science</td>
+                <td>Geography</td>
+                <td>Maths</td>
+                <td>History</td>
+                <td>Physics</td>
+            </tr>
+            <tr align="center">
+                <td>00:00pm</td>
+                <td colspan="6" align="center">Lunch Break</td>
+            </tr>
+            <tr align="center">
+                <td>00:00pm</td>
+                <td>Geography</td>
+                <td>Maths</td>
+                <td rowspan="2" align="center">PT</td>
+                <td>History</td>
+                <td>Science</td>
+                <td>Physics</td>
+            </tr>
+            <tr align="center">
+                <td>00:00pm</td>
+                <td>History</td>
+                <td>Maths</td>
+                <!-- <td>Geography</td> -->
+                <td>Science</td>
+                <td>Physics</td>
+                <td>PT</td>
+            </tr>
+            <tr align="center">
+                <td>00:00pm</td>
+                <td>History</td>
+                <td>PT</td>
+                <td colspan="2" align="center">Science</td>
+                <td>Physics</td>
+                <td>Geography</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
