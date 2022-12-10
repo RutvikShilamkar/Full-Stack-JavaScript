@@ -1,0 +1,58 @@
+ /* by using unversal selector you are saying make all html elements background color gray. This results into masking of navbar or other elements background color. That's why even tho black color is applied to nav gray color is rendered by CSS */
+        /* *{
+            background-color: gray;
+        } */
+        body{
+            background-color: gray;
+            font-family: 'Roboto', sans-serif;
+        }
+        .navbar{
+            background-color: black;
+            color: white;
+            border-radius: 30px;
+        }
+        /* .navbar ul{
+            list-style-position: inside;
+        } */
+
+        /* we made all li float left so they overflowed out of parent ul...to troubleshoot that we use overflow:auto  or add non float element to ul */
+        .navbar ul{
+            overflow: auto;
+        }
+        .navbar ul li{
+            float: left;
+            list-style: none;
+            margin: 12px 8px;
+        }
+        .navbar ul li a{
+            text-decoration: none;
+            color: white;
+            /* why padding to anchor tag and margin to li?  */
+            /* when padding is added to anchor tag its clickable area is increased */
+            /* but if we add to li its of no use becz you have to click on text on anchor tag text  */
+            padding: 3px 30px;
+        }
+
+        .navbar ul li a:hover{
+            background-color: rgb(131, 138, 145);
+            /* border: 2px solid black; */
+            border-radius: 15px;
+            color: rgba(255, 0, 0, 0.753);
+            font-weight: bolder;
+        }
+        .search{
+            float: right;
+            /* margin-right: 0px; */
+            margin-top: 5px;
+            padding: 2px 25px;
+        }
+
+        .search input[type='text']{
+            text-align: center;
+            width: 130px;
+            border-radius: 18px;
+            padding: 3px 17px;
+        }
+        /* .search input[type='text']:focus{
+            border: 5px solid red;
+        } */

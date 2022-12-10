@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web structure using float & clear</title>
+    <link href="https://fonts.googleapis.com/css2?family=Mukta&display=swap" rel="stylesheet">
+    <style>
+        *{
+            /* this is done in order to not worry about borders and padding of items  */
+            box-sizing: border-box;
+        }
+        .container{
+            /* notice height is not specifies  */
+            width: 900px;
+            border: 5px solid #414141;
+            margin: 150px auto;
+            font-family: 'Mukta', sans-serif;
+            background-color: #e4a8e5;
+            border-radius: 15px;
+        }
+        .item{
+            border: 3px solid gray;
+            margin: 12px 3px;
+            padding: 12px 30px;
+            background-color: #ffeaea;
+            border-radius: 5px;
+            border-bottom-right-radius: 25px;
+        }
+
+        #fruit{
+            float: left;
+            width: 49%;
+        }
+        #computer{
+            float: right;
+            width: 49%;
+        }
+        #stationary{
+            /* float: left; */
+            /* without clear property float elements will be overlapping no float elements */
+            /* clear: left; */
+            clear: both;
+            width: 99%;
+        }
+        #glasses{
+            /* float: left; */
+            width: 99%;
+        }
+
+        p, h3{
+            /* text-align: left; */
+            /* text-align: right; */
+            text-align: justify;
+        }
+
+        header{
+            width: 200px;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header><h1>Shopping site</h1></header>
+        <div id="fruit" class="item">
+            <h3>Fruit</h3>
+            <p id="fruitpara" class="para">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit rem laudantium facere delectus praesentium at id tempora, magni ullam, libero nam pariatur ut dolore magnam repellat porro labore illum! Mollitia, ex consectetur. Vero ad distinctio eveniet. Neque nesciunt quia obcaecati, autem magni cum reprehenderit rerum repellendus minus rem, quis consequuntur!</p>
+        </div>
+        <div id="computer" class="item">
+            <h3>computer</h3>
+            <p id="computerpara" class="para">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit rem laudantium facere delectus praesentium at id tempora, magni ullam, libero nam pariatur ut dolore magnam repellat porro labore illum! Mollitia, ex consectetur. Vero ad distinctio eveniet. Neque nesciunt quia obcaecati, autem magni cum reprehenderit rerum repellendus minus rem, quis consequuntur! Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum impedit, ea deleniti molestias sapiente numquam!</p>
+        </div>
+        <div id="stationary" class="item">
+            <h3>Stationary</h3>
+            <p id="stationarypara" class="para">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit rem laudantium facere delectus praesentium at id tempora, magni ullam, libero nam pariatur ut dolore magnam repellat porro labore illum! Mollitia, ex consectetur. Vero ad distinctio eveniet. Neque nesciunt quia obcaecati, autem magni cum reprehenderit rerum repellendus minus rem, quis consequuntur!</p>
+        </div>
+        <div id="glasses" class="item">
+            <h3>Glasses</h3>
+            <p id="glassespara" class="para">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit rem laudantium facere delectus praesentium at id tempora, magni ullam, libero nam pariatur ut dolore magnam repellat porro labore illum! Mollitia, ex consectetur. Vero ad distinctio eveniet. Neque nesciunt quia obcaecati, autem magni cum reprehenderit rerum repellendus minus rem, quis consequuntur!</p>
+        </div>
+    </div>
+</body>
+</html>

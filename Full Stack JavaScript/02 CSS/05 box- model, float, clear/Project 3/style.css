@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    background-color: #2e2b20;
+    color: white;
+    font-family: "Poppins", sans-serif;
+  }
+  .container {
+    /* border: 2px solid rgb(0, 162, 255); */
+    width: 60vw;
+    height: 100%;
+    margin: auto;
+  }
+  header {
+    color: #e3d7d7;
+    overflow: auto;
+  }
+  header img{
+    width: 60%;
+    padding-top: 25px;
+  }
+  .left {
+    /* border: 2px solid #c9c953; */
+    float: left;
+    /* width: 30%; */
+    padding: 5px;
+  }
+  .mid {
+    /* border: 2px solid red; */
+    float: right;
+    padding: 25px 0px;
+    color: #8d8a88;
+    /* width: 70%; */
+  }
+  .mid ul {
+    /* margin-left: 20%; */
+    float: right;
+  }
+  .mid li {
+    list-style: none;
+    float: left;
+    margin: 0px 10px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    padding-top: 10px;
+  }
+
+  .mid li:last-child{
+    margin-right: 0px;
+    padding-top: 0px;
+  }
+  .right {
+    border: 2px solid greenyellow;
+    float: right;
+    padding: 23px 5px;
+    /* width: 15%; */
+  }
+ .btn {
+    float: right;
+    background-color: #2e2b20;
+    border: 1px solid #cba92c;
+    font-weight: 800;
+    color: #cba92c;
+    border-radius: 5px;
+    padding: 10px 20px;
+  }
+  .content{
+    box-sizing: content-box;
+    margin-top: 5vh;
+  }
+  article {
+    /* border: 2px solid palevioletred; */
+    float: left;
+    width: 49%;
+    height: 25vh;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 800;
+    letter-spacing: 2px;
+    /* word-spacing: 10px; */
+    font-size: 40px;
+    clear: right;
+    padding-right: 5%;
+  }
+  aside {
+    /* clear: left; */
+    float: right;
+    height: 25vh;
+    width: 50%;
+    padding-top: 3vh;
+    padding-right: 5%;
+    /* justify-content: left; */
+  }
+  section {
+    clear: left;
+    clear: right;
+    /* margin-bottom: 0px; */
+    /* border: 2px solid red; */
+    width: 100%;
+    height: 60vh;
+    background-image: url('./assets/banner.png');
+    background-size: cover;
+  }

@@ -1,0 +1,74 @@
+/* Universal Selector*/
+/* used to apply css properties to entire web page  */
+/* *{
+    margin: 0;
+    padding: 0;
+} */
+
+/* Type Selector */
+/* html tag name is used to apply css to all elements with same tag name */
+/* all images will have 100x100 size */
+img {
+  width: 100px;
+  height: 100px;
+}
+
+/* Class Selector */
+.rectangle {
+  background-color: aquamarine;
+  width: 100%;
+  height: 20vh;
+}
+
+/* ID Selector  */
+#sqr {
+  background-color: #6a1b4d;
+  height: 200px;
+  width: 200px;
+}
+
+/* Grouping Selector  */
+span,
+.grouping,
+#grp {
+  color: #d9d55b;
+}
+
+/* ############################################################################# */
+
+/* Chained Selector or And Selector */
+.background.textcolor {
+  background-color: aliceblue;
+  color: royalblue;
+}
+
+p.border {
+  border: 2px solid red;
+}
+
+/* Descendant combinator (inside an element) */
+div ul .bg-black.text-white {
+  background-color: #0d0d0d;
+  color: #ffffff;
+}
+
+/* div ul .bg-black.text-white means apply CSS properties on elements which have .bg-black.text-white both the classes (notice and selector because no spaces between classes) which is inside ul element and the same ul element must be inside the div element. */
+
+/* 8. Child combinator */
+div > ul > .bg-pink.text-purple {
+  background-color: #f1c6c6;
+  color: #22042e;
+}
+
+/* 9. General sibling combinator  */
+
+p ~ span {
+  color: #ff0000b4;
+  background-color: #0a0a07;
+}
+/* Here siblings don't have to be immidietly next to each other, but should be sibling i.e. inside same parent element */
+
+h4+p{
+    color: #62fd6f;
+    background-color: #1132ec;
+}

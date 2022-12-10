@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Box Model</title>
+    <style>
+        *{
+            background-color: black;
+            margin: 0;
+            padding: 0;
+        }
+        #parent1, #parent2{
+            border: 10px solid yellow ;
+            width: 600px;
+            height: 250px;
+            margin-bottom: 50px;
+        }
+        #child1{
+            color: white;
+            border: 10px solid blue;
+            
+            /* content-box; default CSS box-sizing behavior */
+            /* includes content width/height only  */
+            /* width of 600px is aplied to content box then width of padding border is added to 600px. making element wider than 600px */
+            
+            /* box-sizing: content-box; */
+
+            width: 600px;
+            padding: 20px 15px;
+        }
+
+        #parent2{
+            /* Margin collapse  */
+            /* parent1 bottom margin is 50px and parent 2 top margin is 100px so resultant margin is greater of two (100px). */
+            margin-top: 100px;
+        }
+
+        #child2{
+            color: white;
+            border: 10px solid blue;
+            
+            /* now child2 container width will be 600px with padding and border with included by shrinking down content  */
+            /* includes content with/height, padding, border  */
+            box-sizing: border-box;
+
+            width: 600px;
+            padding: 30px 80px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="parent1">
+        <div id="child1">
+            <h3>This is heading</h3>
+            <p id="firstPara">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore sequi est harum libero, mollitia adipisci optio aut reiciendis. Nisi minima obcaecati reprehenderit fuga corporis magnam deserunt quo, perferendis sint necessitatibus? Vitae praesentium voluptatem magnam voluptates aliquam dolor, cum, repellendus sequi consectetur nam id corrupti reprehenderit, perspiciatis placeat assumenda repellat magni.
+            </p>
+        </div>
+    </div>
+    <div id="parent2">
+        <div id="child2">
+            <h3>This is heading</h3>
+            <p id="secondPara">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore sequi est harum libero, mollitia adipisci optio aut reiciendis. Nisi minima obcaecati reprehenderit fuga corporis magnam deserunt quo, perferendis sint necessitatibus? Vitae praesentium voluptatem magnam voluptates aliquam dolor, cum, repellendus sequi consectetur nam id corrupti reprehenderit, perspiciatis placeat assumenda repellat magni.
+            </p>
+        </div>
+    </div>
+</body>
+</html>

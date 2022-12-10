@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>box-text shadow</title>
+    <style>
+        .box{
+            text-align: center;
+
+            line-height: 200px;
+            vertical-align: middle;
+            font-size: 22px;
+            font-weight: bold;
+
+            background-color: antiquewhite;
+            width: 400px;
+            height: 200px;
+            margin: 10px;
+
+            /* box-shadow: offset-x offset-y color; */
+            box-shadow: 10px 13px green;
+            box-shadow: -10px -13px green;
+
+            /* box-shadow: offset-x offset-y blur-radius color; */
+            box-shadow: 7px 5px 10px green;
+            box-shadow: -7px -5px 10px green;
+
+            /* box-shadow: offset-x offset-y blur-radius spread-radius color; */
+            /* box-shadow: -7px -5px 10px 34px green; */
+            /* box-shadow: -7px -5px 10px 34px rgba(71, 172, 172, 0.5); */
+
+            /* inset means box shadow will be inside  */
+            /* inset | offset-x | offset-y | color */
+            /* box-shadow: inset 33px 51px green; */
+
+            /* Any number of shadows, separated by commas */
+            /* box-shadow: 3px 15px 10px 10px green, 20px 6px red; */
+        }
+        .container{
+            display: flex;
+        }
+        h2{
+            /* offset-x | offset-y
+            /* Use defaults for color and blur-radius */
+            text-shadow: 5px 10px;
+
+            /* color | offset-x | offset-y */
+            text-shadow: white 2px 5px;
+
+            /* offset-x | offset-y | blur-radius | color */
+            text-shadow: 1px 4px 2px black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box" id="box-1"><h2>first heading</h2></div>
+        <div class="box" id="box-2"><h2>second heading</h2></div>
+        <div class="box" id="box-3"><h2>third heading</h2></div>
+    </div>
+</body>
+</html>

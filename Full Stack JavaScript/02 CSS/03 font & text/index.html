@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Font Properties</title>
+    <!-- import/apply font before applying stylesheet i.e. CSS  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Distressed&display=swap" rel="stylesheet">
+
+    <style>
+        /* web safe fonnts are suggested by VScode */
+        h3{
+            /* font-family: 'Courier New', Courier, monospace; */
+
+            /* font stack is list of fonts
+            use: if Rubik Distressed is not available cursive will be applied and if cursive font is not available sans-serif will be applied */
+            font-family: 'Rubik Distressed', cursive, sans-serif;
+
+            /* large/larger/50% */
+            font-size: 100px;
+        }
+
+        .class1{
+            /* font-style: normal/oblique/italic */
+            font-style: oblique;
+            
+        }
+
+        .class1 span{
+            font-weight: bolder;
+        }
+
+        .class2{
+            font-variant: small-caps;
+        }
+
+        .class3{
+            font-variant: normal;
+
+            /* distance between two lines  */
+            line-height: 4em;
+        }
+
+        .class4{
+            /* font: style weight size font-family */
+            font:italic bold 22px cursive, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h3>CSS Font Properties</h3>
+
+    <p class="class1">Lorem ipsum dolor <span>sit amet</span> consectetur adipisicing elit. Repellendus, expedita?</p>
+    <p class="class2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, expedita?</p>
+    <p class="class3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, expedita?</p>
+    <p class="class4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, expedita?</p>
+</body>
+</html>

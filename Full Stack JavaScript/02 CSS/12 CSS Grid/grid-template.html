@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        .container{
+            /* when container's display is made grid its children will be grid items and grid propertis are applied on them */
+            display: grid;
+
+            /* grid-template-columns */
+            grid-template-columns: 100px 200px 500px 600px;
+            grid-template-columns: 100px 200px auto 600px;
+            grid-template-columns: repeat(6,200px);
+            grid-template-columns: 1fr 2fr 1fr 4fr;
+
+            /* <'row-gap'> <'column-gap'> */
+            gap: 10px 20px;
+
+            /* first three rows fraction value is defined */
+            grid-template-rows: 1fr 2fr 6fr;
+            /* rows which are are not assigned with value will be set with 3fr */
+            grid-auto-rows: 3fr;
+
+            /* grid-template-rows / grid-template-columns values */
+            grid-template: 100px 1fr / 50px 1fr;
+            
+        }
+        .box:nth-child(6){
+            background-color: rgb(64, 236, 241);
+            /* grid span properties  */
+            /* grid-column-start: 2;
+            grid-column-end: 4;
+            grid-row-start: 2;
+            grid-row-end: 4; */
+            grid-column: 2/span 2;
+            grid-row: 2/span 2;
+        }
+        .box{
+            /* height: 50px; */
+            border: 2px solid red;
+            /* margin: 5px; */
+            background-color: blanchedalmond;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">box-1</div>
+        <div class="box">box-2</div>
+        <div class="box">box-3</div>
+        <div class="box">box-4</div>
+        <div class="box">box-5</div>
+        <div class="box">box-6</div>
+        <div class="box">box-7</div>
+        <div class="box">box-8</div>
+        <div class="box">box-9</div>
+        <div class="box">box-10</div>
+        <div class="box">box-11</div>
+        <div class="box">box-12</div>
+        <div class="box">box-13</div>
+        <div class="box">box-14</div>
+        <div class="box">box-15</div>
+        <div class="box">box-16</div>
+        <div class="box">box-17</div>
+        <div class="box">box-18</div>
+        <div class="box">box-19</div>
+        <div class="box">box-20</div>
+        <div class="box">box-21</div>
+        <div class="box">box-22</div>
+        <div class="box">box-23</div>
+        <div class="box">box-24</div>
+        <div class="box">box-25</div>
+        <div class="box">box-26</div>
+        <div class="box">box-27</div>
+        <div class="box">box-28</div>
+        <div class="box">box-29</div>
+        <div class="box">box-30</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform</title>
+    <style>
+        body{
+            background-color: rgb(47, 122, 122);
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            height: 100vh;
+            align-items: center;
+        }
+        .box{
+            width: 200px;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 5px;
+            background-color: papayawhip;
+            /* usecase 1 */
+            /* transform: rotate(45deg); */
+            /* use-case 2 */
+            transition-property: transform;
+            transition-property: all;
+            transition-duration: 2s;
+            transition-timing-function: ease-out;
+        }
+
+        .box:hover{
+            transform: rotate(45deg);
+            transform: skew(45deg);
+            transform: scale(2);
+            transform: translateX(50px);
+            transform: translateY(50px);
+            transform: translate(50px, 50px);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            Transform applied!
+        </div>
+    </div>
+</body>
+</html>

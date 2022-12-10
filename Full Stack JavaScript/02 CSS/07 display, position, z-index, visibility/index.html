@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Display & Visibility Property</title>
+    <style>
+        /* width/height can not be set . and other elements with inline scope can come into same line
+        display: inline; */
+
+        /* width/height can be set but takes whole block*/
+        /* display: block; */
+
+        /* will have properties of both. width/height can be set and can be in same line  */
+        /* display: inline-block; */
+        
+        .box:first-child{
+            margin-left: 10px;
+            /* element is hidden but its space is reserved */
+            visibility: hidden;
+        }
+
+        .box:nth-child(3){
+            /* element is removed from document flow & its space is not blocked */
+            display: none;
+        }
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            background-color: black;
+            color: white;
+        }
+
+        header img{
+            display: block;
+            width: 150px;
+            margin: auto;
+        }
+
+        header,section{
+            width: 80vw;
+            margin: auto;
+            border: 2px solid red;
+        }
+
+        header h2{
+            width: 20vw;
+            margin: auto;
+            text-align: center;
+        }
+
+        .box{
+            width: 32%;
+            border: 1px solid gray;
+            margin: 4px;
+            display: inline-block;
+            text-align: justify;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://learn.ineuron.ai/_next/image?url=%2Fimages%2Fineuron-logo.png&w=750&q=75" alt="ineuron-logo">
+        <h2>Display Tutorial</h2>
+    </header>
+    <section>
+        <div class="box">
+            <h3>Subject1</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem, voluptate repellendus possimus, veniam eum hic modi eveniet velit, sapiente nam dolorum quasi in culpa. Odit necessitatibus at minima iusto porro, accusamus in impedit aperiam consequuntur, minus veritatis pariatur? Quo tenetur, suscipit error laborum, soluta labore iure ipsum voluptatibus dolore odit perspiciatis aspernatur maiores recusandae obcaecati dolores nobis repellat! Nemo magnam perferendis quasi deserunt hic quas voluptates ducimus delectus quam laboriosam? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum non, necessitatibus accusantium repellendus ipsam, fuga quasi modi perferendis fugiat maxime architecto debitis asperiores omnis dolorem doloribus libero vel reiciendis recusandae sed ex quidem sit deserunt illo tempore. Tenetur eligendi laboriosam, quaerat quo doloremque molestias, sint repellendus perferendis, tempore ratione at quasi officiis? Expedita magnam a unde facere nostrum beatae! Ratione dignissimos cupiditate et neque accusamus sunt nostrum odio earum expedita explicabo cumque doloribus, est incidunt corrupti soluta tempora qui eaque asperiores vitae alias. Non eum quisquam libero natus ea ipsa est temporibus adipisci quos! Sint explicabo similique quasi magni sapiente.</p>
+        </div>
+        <div class="box">
+            <h3>Subject2</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem, voluptate repellendus possimus, veniam eum hic modi eveniet velit, sapiente nam dolorum quasi in culpa. Odit necessitatibus at minima iusto porro, accusamus in impedit aperiam consequuntur, minus veritatis pariatur? Quo tenetur, suscipit error laborum, soluta labore iure ipsum voluptatibus dolore odit perspiciatis aspernatur maiores recusandae obcaecati dolores nobis repellat! Nemo magnam perferendis quasi deserunt hic quas voluptates ducimus delectus quam laboriosam? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum non, necessitatibus accusantium repellendus ipsam, fuga quasi modi perferendis fugiat maxime architecto debitis asperiores omnis dolorem doloribus libero vel reiciendis recusandae sed ex quidem sit deserunt illo tempore. Tenetur eligendi laboriosam, quaerat quo doloremque molestias, sint repellendus perferendis, tempore ratione at quasi officiis? Expedita magnam a unde facere nostrum beatae! Ratione dignissimos cupiditate et neque accusamus sunt nostrum odio earum expedita explicabo cumque doloribus, est incidunt corrupti soluta tempora qui eaque asperiores vitae alias. Non eum quisquam libero natus ea ipsa est temporibus adipisci quos! Sint explicabo similique quasi magni sapiente.</p>
+        </div>
+        <div class="box">
+            <h3>Subject3</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem, voluptate repellendus possimus, veniam eum hic modi eveniet velit, sapiente nam dolorum quasi in culpa. Odit necessitatibus at minima iusto porro, accusamus in impedit aperiam consequuntur, minus veritatis pariatur? Quo tenetur, suscipit error laborum, soluta labore iure ipsum voluptatibus dolore odit perspiciatis aspernatur maiores recusandae obcaecati dolores nobis repellat! Nemo magnam perferendis quasi deserunt hic quas voluptates ducimus delectus quam laboriosam? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum non, necessitatibus accusantium repellendus ipsam, fuga quasi modi perferendis fugiat maxime architecto debitis asperiores omnis dolorem doloribus libero vel reiciendis recusandae sed ex quidem sit deserunt illo tempore. Tenetur eligendi laboriosam, quaerat quo doloremque molestias, sint repellendus perferendis, tempore ratione at quasi officiis? Expedita magnam a unde facere nostrum beatae! Ratione dignissimos cupiditate et neque accusamus sunt nostrum odio earum expedita explicabo cumque doloribus, est incidunt corrupti soluta tempora qui eaque asperiores vitae alias. Non eum quisquam libero natus ea ipsa est temporibus adipisci quos! Sint explicabo similique quasi magni sapiente.</p>
+        </div>
+        <div class="box">
+            <h3>Subject4</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem, voluptate repellendus possimus, veniam eum hic modi eveniet velit, sapiente nam dolorum quasi in culpa. Odit necessitatibus at minima iusto porro, accusamus in impedit aperiam consequuntur, minus veritatis pariatur? Quo tenetur, suscipit error laborum, soluta labore iure ipsum voluptatibus dolore odit perspiciatis aspernatur maiores recusandae obcaecati dolores nobis repellat! Nemo magnam perferendis quasi deserunt hic quas voluptates ducimus delectus quam laboriosam? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum non, necessitatibus accusantium repellendus ipsam, fuga quasi modi perferendis fugiat maxime architecto debitis asperiores omnis dolorem doloribus libero vel reiciendis recusandae sed ex quidem sit deserunt illo tempore. Tenetur eligendi laboriosam, quaerat quo doloremque molestias, sint repellendus perferendis, tempore ratione at quasi officiis? Expedita magnam a unde facere nostrum beatae! Ratione dignissimos cupiditate et neque accusamus sunt nostrum odio earum expedita explicabo cumque doloribus, est incidunt corrupti soluta tempora qui eaque asperiores vitae alias. Non eum quisquam libero natus ea ipsa est temporibus adipisci quos! Sint explicabo similique quasi magni sapiente.</p>
+        </div>
+        <div class="box">
+            <h3>Subject5</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem, voluptate repellendus possimus, veniam eum hic modi eveniet velit, sapiente nam dolorum quasi in culpa. Odit necessitatibus at minima iusto porro, accusamus in impedit aperiam consequuntur, minus veritatis pariatur? Quo tenetur, suscipit error laborum, soluta labore iure ipsum voluptatibus dolore odit perspiciatis aspernatur maiores recusandae obcaecati dolores nobis repellat! Nemo magnam perferendis quasi deserunt hic quas voluptates ducimus delectus quam laboriosam? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum non, necessitatibus accusantium repellendus ipsam, fuga quasi modi perferendis fugiat maxime architecto debitis asperiores omnis dolorem doloribus libero vel reiciendis recusandae sed ex quidem sit deserunt illo tempore. Tenetur eligendi laboriosam, quaerat quo doloremque molestias, sint repellendus perferendis, tempore ratione at quasi officiis? Expedita magnam a unde facere nostrum beatae! Ratione dignissimos cupiditate et neque accusamus sunt nostrum odio earum expedita explicabo cumque doloribus, est incidunt corrupti soluta tempora qui eaque asperiores vitae alias. Non eum quisquam libero natus ea ipsa est temporibus adipisci quos! Sint explicabo similique quasi magni sapiente.</p>
+        </div>
+    </section>
+</body>
+</html>

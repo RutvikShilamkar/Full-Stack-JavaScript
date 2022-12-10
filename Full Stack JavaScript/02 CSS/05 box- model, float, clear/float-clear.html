@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float & Clear</title>
+    <style>
+        *{
+            background-color: black;
+            margin: 0;
+            padding: 0;
+            color: white;
+        }
+        /* Note: whenever we float all the elements inside parent the get overflowned unless there is atleast one non-float element. On that elment float elemnts will overlap. To avoid this clear property is used. */
+
+        .container{
+            width: 900px;
+            margin: auto; /*  to center the container/div  & works only when width is given*/
+            border: 2px solid #d87093;
+            /* box-sizing: border-box; */
+        }
+        .left{
+            width: 100px; 
+            height: 100px;
+            background-color: #fc8d0e;
+            float: left;
+        }
+        .left:nth-child(2){
+            margin-left: 20px;
+            background-color: #0a17ce;
+        }
+
+        .right{
+            width: 150px;
+            height: 150px;
+            background-color: #13eb25;
+            float: right;
+        }
+
+        p{
+            /* clear: both; */
+            clear: left;
+            /* clear: right */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left">1</div>
+        <div class="left">2</div>
+        <div class="right">3</div>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos, consectetur voluptate perspiciatis laudantium cum quidem quo impedit illo ratione fuga nisi porro earum, error obcaecati, sit provident explicabo eius vitae ipsa debitis nihil incidunt inventore sapiente nostrum. Excepturi sapiente dolorum unde non modi quod minima repellat numquam, optio ab asperiores, iusto, necessitatibus consequuntur eum repellendus qui distinctio voluptates vel eius reprehenderit voluptatibus blanditiis. Eos iure, molestiae officia culpa quae et exercitationem praesentium sit error voluptas. Vel nostrum illum blanditiis dignissimos dolores harum accusantium non tenetur itaque consequuntur repudiandae sunt vitae rem, modi, quisquam, quaerat facilis asperiores nihil laudantium eaque! Ut.
+        </p>
+    </div>
+</body>
+</html>

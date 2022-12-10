@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>color border background properties</title>
+    <style>
+        h3{
+            /* color: red;
+
+            color: rgb(173, 111, 235);
+            color: rgba(255, 0, 0, 0.8);
+
+            color: #f09711; */
+
+            color: hsla(254, 38%, 55%);
+            /* color: hsla(254, 38%, 55%, 0.2); */
+        }
+
+        /* ########################################################################  */
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: tomato;
+            display: inline-block;
+        }
+
+        .cont1{
+            /* border-style: solid;
+            border-width: 2px;
+            border-color: #120E43; */
+
+            border: 2px solid #120E43;
+            border-radius: 15px;
+        }
+
+        .cont2{
+            /* element appear embossed */
+            /* border-style: outset; */
+
+            /* element appear embedded */
+            border-style: inset;
+            border-bottom-style: dashed;
+            border-width: 10px;
+            border-color: #2600ff;
+            /* border: 0.5rem outset pink; */
+            border-top-left-radius: 20px;
+            border-top-width: 5px;
+            border-left-color: #2CF60B;
+        }
+
+        .cont3{
+            border-top: 2px solid yellowgreen;
+            border-right: 2px solid rebeccapurple;
+            border-top-right-radius: 20px;
+        }
+
+        /* ########################################################################  */
+
+        #container{
+            width: 700px;
+            height: 500px;
+            border: 2px solid black;
+            background-color: antiquewhite;
+
+            background-image: url('https://media-exp1.licdn.com/dms/image/D4D03AQHKJTT-TBSVoA/profile-displayphoto-shrink_200_200/0/1667589767936?e=1674691200&v=beta&t=jS0iXadFqto3kC_JNK0Lmj7ReIo6csvEebjioiKFdsg');
+
+            /* background-repeat: repeat-x; */
+            background-repeat: no-repeat;
+            /* background-attachment: fixed; */
+            background-attachment: scroll;
+            /* background-size: cover; */
+            /* background-size: contain; */
+            background-size: auto;
+            /* background-size: 150px 100px ; */
+
+            /* background-position: top right; */
+            /* background-position: center; */
+            background-position: bottom right;
+
+            background: antiquewhite url(https://media-exp1.licdn.com/dms/image/D4D03AQHKJTT-TBSVoA/profile-displayphoto-shrink_200_200/0/1667589767936?e=1674691200&v=beta&t=jS0iXadFqto3kC_JNK0Lmj7ReIo6csvEebjioiKFdsg) no-repeat scroll center right;
+        }
+    </style>
+</head>
+<body>
+    <h3>Color can be applied 6 ways</h3>
+
+    <div class="cont1">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit vel iusto, asperiores distinctio</p>
+    </div>
+    <div class="cont2">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit vel iusto, asperiores distinctio</p>
+    </div>
+    <div class="cont3">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit vel iusto, asperiores distinctio</p>
+    </div>
+
+    <div id="container">
+
+    </div>
+</body>
+</html>

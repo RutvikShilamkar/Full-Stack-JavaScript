@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Selectors</title>
+    <style>
+        /* pseudo attribute selectors */
+        input[type='text']{
+            background-color: aquamarine;
+            color: red;
+            padding: 30px;
+            text-align: center;
+        }
+
+        input[type='button']{
+            padding: 10px 20px;
+            border-radius: 10px;
+            border: 2px solid blue;
+            background-color: antiquewhite;
+        }
+        
+        input[type='submit']{
+            padding: 5px 30px;
+            border: 2px solid #ff000096;
+        }
+        
+        a[target]{
+            background-color: #00000028;
+            padding: 10px;
+        }
+
+        a[target='_self']{
+            background-color: #90f8f8;
+            padding: 10px;
+        }
+
+        /* 2. Pseudo Classes Selectors */
+        a:visited{
+            color: #e627ac;
+        }
+
+        .sqr{
+            width: 100px;
+            height: 100px;
+            background-color: tomato;
+        }
+
+        .sqr:hover{
+            border-radius: 50px;
+            background-color: #e99fe9;
+        }
+
+        li:nth-child(5){
+            color: red;
+        }
+
+        li:nth-child(3n+3){
+            color: #0a22f5;
+        }
+
+        li:nth-child(even){
+            background-color: #e99fe9;
+        }
+
+        li:last-child{
+            background-color: black;
+            color: white;
+        }
+
+        li:first-child{
+            color: #f7fa36;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <h2>1. Pseudo Attribute Seletors</h2>
+    <form action="" class="form-container">
+        <input type="text" name="" id="" placeholder="Enter your name">
+        <input type="button" value="Submit" placeholder="Submit">
+        <input type="submit" value="Submit">
+    </form> 
+    <br>
+    <a href="https://google.com" target="_blank">Go to Google</a>
+    <a href="http://instagram.com" target="_self">Open Insta</a>
+    <h2>2. Pseudo Classes Selectors</h2>
+    <span>hover over to make it cirlce:</span>
+    <div class="sqr"></div>
+    <ul>
+        <li class="sub" id="sub-1">Subject 1</li>
+        <li class="sub" id="sub-2">Subject 2</li>
+        <li class="sub" id="sub-3">Subject 3</li>
+        <li class="sub" id="sub-4">Subject 4</li>
+        <li class="sub" id="sub-5">Subject 5</li>
+        <li class="sub" id="sub-6">Subject 6</li>
+        <li class="sub" id="sub-7">Subject 7</li>
+        <li class="sub" id="sub-8">Subject 8</li>
+        <li class="sub" id="sub-9">Subject 9</li>
+        <li class="sub" id="sub-10">Subject 10</li>
+    </ul>
+</body>
+</html>

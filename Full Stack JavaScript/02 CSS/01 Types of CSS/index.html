@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS types</title>
+    <!-- external css  -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- internal css  -->
+    <Style>
+        p.internal {
+            color: blue;
+            background-color: antiquewhite;
+        }
+    </Style>
+
+    <!-- uncomment to apply external css  -->
+    <!-- <link rel="stylesheet" href="style.css"> -->
+
+
+</head>
+
+<body>
+    <h2>CSS Types</h2>
+    <div>
+        <h3>1) Inline CSS</h3>
+        <p>style attribute is used in follwong syntax.
+            <strong>style="property:value; property:value"</strong>
+        </p>
+        <!-- inline CSS  -->
+        <p style="color: white; background-color: black;">Lorem, ipsum dolor sit amet consectetur adipisicing elit.Expedita iste sapiente ut assumenda suscipit harum quae a blanditiis. Ullam quidem aspernatur aliquidperferendis nobis, iusto quisquam ad natus inventore in voluptatem perspiciatis fugit ex alias velasperiores, aliquam optio explicabo.
+        </p>
+    </div>
+    <div>
+        <h3>2) Internal/External CSS</h3>
+        <p>style tag is used in html's head tag & selectors are used to target or select elements and on them css is applied.</p>
+        <ul>
+            <li>Below paragraph has two classes: internal & external. internal css is applied by selecting internal class and external css is applied by selecting external class in style.css file</li>
+            <li>depending upon position of link tag (which applys external css) in head with respect to style tag below para will have diffeent css</li>
+            <li> <strong>if link is after style tag external css will be applied</strong></li>
+        </ul>
+        <p class="internal external">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita iste sapiente utassumenda suscipit harum quae a blanditiis. Ullam quidem aspernatur aliquid perferendis nobis, iusto quisquam ad natus inventore in voluptatem perspiciatis fugit ex alias vel asperiores, aliquam optio explicabo.
+        </p>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive design & Units</title>
+    <style>
+        /* root element font size */
+        html{
+            font-size: 16px;
+        }
+        .container{
+            text-align: center;
+            border: 2px solid red;
+        }
+        .rem{
+            /* font-size: 2rem; */
+        }
+
+        .box{
+            background-color: #3498db;
+            color: #fff;
+        }
+        .container1{
+            /* container1 div inherits the root font size of 16px  */
+            /* computed as 1.5 x 16 = 24. */
+            font-size: 1.5em;
+        }
+        .container2{
+            /* container2 div inherits the container1 font size of 24px & not from root element */
+            /* computed as 1.25 x 24 = 30. */
+            padding: 1.25em;
+        }
+        .container3{
+            /* container3 div also inherits the container1 font size of 24px & not from root or container2 becz font size is not changed in container2 element */
+            /* computed as 1.5 x 24 = 36. */
+            padding: 1.5em;
+        }
+        .container4{
+            /* container4 div inherits the container1 font size of 24px & not from root element */
+            /* computed as 1.25 x 24 = 30. */
+            font-size: 1.25em;
+            /* computed as 1.5 x 30 = 45. */
+            padding: 1.5em;
+        }
+
+        .container6{
+            border: 5px solid blue;
+            width: 50vw;
+            height: 50vh;
+        }
+    </style>
+</head>
+<body>
+    <h1>Various Ways To Achieve Responsive Design :</h1>
+    <ol>
+        <li>By using rem/vh/vw units over pixels.</li>
+        <li>By using max-width/max-height.</li>
+        <li>Using CSS Media Queries.</li>
+        <li>Setting up the viewport.</li>
+    </ol>
+    <h3>Read below artice for detail understanding or em and rem units:</h3>
+    <a href="https://webdesign.tutsplus.com/tutorials/comprehensive-guide-when-to-use-em-vs-rem--cms-23984">Comprehensive Guide: When to Use Em vs. Rem</a>
+    
+    <h1>1) How rem Units Translate to Pixel Values</h1>
+    <h3>* the pixel size they translate to depends on the font size of the root element of the page, i.e. the html element.</h3>
+    <h3>* For example, with a root element font size of 16px, 10rem would equate to 160px, i.e. 10 x 16 = 160.</h3>
+    <h3>* U can check value of font size of particular element in "computed" section of developer tool</h3>
+    <div class="container">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero dolorem sunt voluptatem modi perspiciatis illo, laboriosam quisquam quidem dolorum labore odio doloribus eligendi temporibus aliquam itaque expedita eos recusandae dolores.</p>
+        <p class="rem">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui dolorem quibusdam harum asperiores numquam nihil magni nisi veniam optio sunt inventore accusantium molestias fugit esse doloribus molestiae, omnis eum veritatis.
+        </p>
+    </div>
+    <br><hr><br>
+    <h1>2) How em Units Translate to Pixel Values</h1>
+    <h3>* note: It’s a somewhat widespread misconception that em units are relative to the font size of the parent element. In fact, as per the W3 spec, they are relative to the font size “of the element on which they are used”.</h3>
+    <h3>*Parent element font sizes can effect em values, but when that happens it’s solely because of inheritance.</h3>
+    <h3>* check for comments in css *</h3>
+    <div class="container1 box">
+        <div class="container2 box">
+            <div class="container3 box">
+                Inheritance with em units demo
+            </div>
+        </div>
+        <div class="container4 box">
+            adjacent container Inheritance with em units demo
+        </div>
+    </div>
+    <h1>3) vw & vh</h1>
+    <h3>* vw: View width. 1vw is 1% of the width of the viewport.</h3>
+    <h3>* vh: View height. 1vh is 1% of the height of the viewport.</h3>
+    <div class="container6">
+        <h1>vw & bh are set to 50 will result into box of width - 50% of viewport width and 50% of viewport height</h1>
+    </div>
+</body>
+</html>

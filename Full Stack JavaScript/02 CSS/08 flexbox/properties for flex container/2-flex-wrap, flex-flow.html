@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex wrap and flex flow</title>
+    <style>
+        body{
+            background-color: rgb(75, 75, 75);
+            color: white;
+        }
+        .container3{
+            border: 2px solid black;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            /*  flex-wrap: nowrap is a default value*/
+            /* flex-wrap: nowrap; */
+
+            flex-direction: row;
+            flex-wrap: wrap;
+
+            /* flex-direction: row-reverse;
+            flex-wrap: wrap; */
+
+            /* flex-direction: row; */
+            /* now wrapping will be from bottom to top or in opposite direction cross axis */
+            /* flex-wrap: wrap-reverse; */
+
+            /* flex-flow: column nowrap; */
+            flex-flow: column wrap;
+            flex-flow: column wrap-reverse;
+            
+        }
+        .box3{
+            background-color: orange;
+            border: 2px solid blue;
+            width: 200px;
+            height: 200px; 
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h4>3) Flex-wrap & flex-flow shorthand  : reduce width/height of website to notice difference</h4>
+    <p>based on flex-direction wrapping of flex items will be done.</p>
+    <p>*******uncomment different combination of flex-direction & flex-wrap properties to understand******</p>
+    <p>wrapping happens around cross axis and in case of flex-wrap: wrap-reverse; will be from bottom to top or in opposite direction cross axis</p>
+    <div class="container3">
+        <div class="box3" id="box-1">Flex Box 1</div>
+        <div class="box3" id="box-2">Flex Box 2</div>
+        <div class="box3" id="box-3">Flex Box 3</div>
+        <div class="box3" id="box-4">Flex Box 4</div>
+        <div class="box3" id="box-5">Flex Box 5</div>
+        <div class="box3" id="box-6">Flex Box 6</div>
+    </div>
+</body>
+</html>

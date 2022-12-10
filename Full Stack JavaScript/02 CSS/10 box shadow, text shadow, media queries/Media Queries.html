@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries</title>
+    <style>
+        .container{
+            text-align: center;
+        }
+        .box{
+            width: 90vw;
+            background-color: red;
+            height: 25vh;
+            display: none;
+        }
+
+        @media only screen and (max-width: 375px){
+            #box-5{
+                display: block;
+                color: #fff;
+            }
+        }
+        @media (max-width: 412px) and (min-width: 376px){
+            #box-4{
+                display: block;
+                background-color: yellow;
+                color: black;
+            }
+        }
+        @media (max-width: 768px) and (min-width: 413px){
+            #box-3{
+                display: block;
+                background-color: aliceblue;
+            }
+        }
+        @media (max-width: 820px) and (min-width: 769px){
+            #box-2{
+                display: block;
+                background-color: pink;
+            }
+        }
+        @media (min-width: 821px){
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            #box-1{
+                display: block;
+                width: 100vw;
+                height: 100vh;
+                background-color: aqua;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- <h1>Media queries allow you to apply CSS styles depending on a device's general type (such as print vs. screen) or other characteristics such as screen resolution or browser viewport width. 
+    </h1>
+    <h3>Media queries are used for the following:</h3>
+    <ul>
+        <li>To conditionally apply styles with the CSS @media and @import at-rules.</li>
+        <li>To target specific media for the &lt;style&gt;, &lt;link&gt;, &lt;source&gt;, and other HTML elements with the media= attribute.</li>
+        <li>To test and monitor media states using the Window.matchMedia() and MediaQueryList.addListener() JavaScript methods.</li>
+    </ul> -->
+
+    <div class="container">
+        <div class="box" id="box-1"><h1>This is 27 inch monitor</h1></div>
+        <div class="box" id="box-2"><h1>This is ipad Air</h1></div>
+        <div class="box" id="box-3"><h1>This is ipad mini</h1></div>
+        <div class="box" id="box-4"><h1>This S20 Ultra</h1></div>
+        <div class="box" id="box-5"><h1>This is iphone SE</h1></div>
+    </div>
+</body>
+</html>

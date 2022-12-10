@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <style>
+        body{
+            background-color: rgb(75, 75, 75);
+            color: white;
+        }
+        .container1{
+            border: 2px solid black;
+            width: 100vw;
+            height: 50vh;
+            display: flex;
+        }
+        .box1{
+            background-color: palevioletred;
+            border: 2px solid rgb(5, 28, 231);
+            width: 200px;
+            /* height: 200px;  */
+            margin: 10px;
+        }
+        .container2{
+            border: 2px solid black;
+            width: 100vw;
+            height: 50vh;
+            display: flex;
+            
+            /* default flex-direction value is row */
+            /* flex-direction: row;
+            flex-direction: column;
+            flex-direction: row-reverse; */
+            flex-direction: column-reverse;
+        }
+        .box2{
+            background-color: rgb(209, 9, 76);
+            border: 2px solid rgb(168, 247, 137);
+            width: 200px;
+            height: 200px; 
+            margin: 10px;
+        }
+        .container3{
+            border: 2px solid black;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            /*  flex-wrap: nowrap is a default value*/
+            /* flex-wrap: nowrap; */
+
+            /* flex-direction: row;
+            flex-wrap: wrap; */
+
+            /* flex-direction: row-reverse;
+            flex-wrap: wrap; */
+
+            /* flex-direction: row; */
+            /* now wrapping will be from bottom to top or in opposite direction cross axis */
+            /* flex-wrap: wrap-reverse; */
+
+            /* flex-flow: column nowrap; */
+            flex-flow: column wrap;
+            flex-flow: column wrap-reverse;
+            
+        }
+        .box3{
+            background-color: orange;
+            border: 2px solid blue;
+            width: 200px;
+            height: 200px; 
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Flexbox is a one-dimensional layout method for arranging items in rows or columns</h1>
+    <p>Items flex (expand) to fill additional space or shrink to fit into smaller spaces.</p>
+    <img src="./felx-model.png" alt="flex model">
+    <h4>1) as soon as container display is made flex, default felx direction (row) is applied and and felx item expand in height to fill aditional space because height is not defined for boxes.</h4>
+    <p>uncomment height in box1 selector to notice difference</p>
+    <div class="container1">
+        <div class="box1" id="box-1">Flex Box 1</div>
+        <div class="box1" id="box-2">Flex Box 2</div>
+        <div class="box1" id="box-3">Flex Box 3</div>
+        <div class="box1" id="box-4">Flex Box 4</div>
+        <div class="box1" id="box-5">Flex Box 5</div>
+        <div class="box1" id="box-6">Flex Box 6</div>
+    </div>
+
+    <h4>2) for flex-direction column width is shrinked to fit in defined height of flex container.</h4>
+    <div class="container2">
+        <div class="box2" id="box-1">Flex Box 1</div>
+        <div class="box2" id="box-2">Flex Box 2</div>
+        <div class="box2" id="box-3">Flex Box 3</div>
+        <div class="box2" id="box-4">Flex Box 4</div>
+        <div class="box2" id="box-5">Flex Box 5</div>
+        <div class="box2" id="box-6">Flex Box 6</div>
+    </div>
+    <p>*note: above two flex items will <b>shrink in size</b>, upto defined height or width or based on content inside, but won't wrap. To counter this flex box has <b>flex-wrap</b> property.</p>
+
+    <h4>3) Flex-wrap & flex-flow shorthand  : reduce width of website to notice difference</h4>
+    <p>based on flex-direction wrapping of flex items will be done.</p>
+    <p>*******uncomment different combination of flex-direction & flex-wrap properties to understand******</p>
+    <p>wrapping happens arounf cross axis and in case of flex-wrap: wrap-reverse; will be from bottom to top or in opposite direction cross axis</p>
+    <div class="container3">
+        <div class="box3" id="box-1">Flex Box 1</div>
+        <div class="box3" id="box-2">Flex Box 2</div>
+        <div class="box3" id="box-3">Flex Box 3</div>
+        <div class="box3" id="box-4">Flex Box 4</div>
+        <div class="box3" id="box-5">Flex Box 5</div>
+        <div class="box3" id="box-6">Flex Box 6</div>
+    </div>
+
+    <br>
+
+    <h2>go to -></h2>
+    <h2 >1) <a href="./2-flex-wrap, flex-flow.html" style="background-color: white;">flex wrap and flex flow</a></h2>
+    <h2 >2) <a href="./3justify-content,align-items.html" style="background-color: white;">justify-content, align-items</a></h2>
+</body>
+</html>

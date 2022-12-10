@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Before and After Pseudo Selectors</title>
+    <style>
+      p::before {
+        content: "This is before content : ";
+        background-color:  yellowgreen;
+      }
+
+      a::before {
+        content: attr(id) " : ";
+        margin-right: 10px;
+      }
+
+      .local-link::before{
+        background-image: url("firefox.png");
+        background-repeat: no-repeat;
+        display: inline-block;
+        background-size: 30px 30px;
+        width: 40px;
+        height: 30px;
+        margin-right: 5px;
+        content: "";
+      }
+
+      .imp-label:hover::before{
+        content: '';
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        border-radius: 10px;
+        margin-right: 10px;
+        background-color: orange;
+      }
+
+      /* if we add img using content we don't have control over its size so use background-image property */
+      /* .local-link::before{
+        content: url(bat-svgrepo-com.svg);
+        width: 50px;
+        height: 50px;
+      } */
+
+      /* a::before{
+        content: "("attr(href)"):";
+      } */
+
+      a::after {
+        content: "(" attr(id) ")!!!!!";
+        margin-left: 10px;
+        color: red;
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <h3 class="imp-label">Before Pseudo Seletor</h3>
+    <p>Before is applied here</p>
+    <ul>
+      <li>
+        <a id="moz" class="local-link" href="https://www.mozilla.org/"> Mozilla Home Page</a>
+      </li>
+      <li>
+        <a id="mdn"  href="https://developer.mozilla.org/">
+          Mozilla Developer Network</a
+        >
+      </li>
+    </ul>
+  </body>
+</html>

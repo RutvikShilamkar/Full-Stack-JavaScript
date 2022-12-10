@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* positions: static(default), relative, absolute, fixed, sticky */
+        /* z-index will work for  positions: relative, absolute, fixed, sticky & doesn't work on static position */
+        /* comment below css and uncomment one by one to understand */
+        #box1{
+            /* static default position. Element loaded like normal html doc flow. top/bottom left/right z-index has no effect */
+            /* position: static; */
+
+            /* element is removed from the normal document flow that's why applying margin has no effect */
+            /* top/bottom left/right z-index will work relative to elements normal position and space will be left at its original position  */
+            /* margin-top: 250px; */
+            position: relative;
+            top: 250px;
+            /* left: 15px;  */
+        }
+        #box2{
+            /* element is removed from the normal document flow that's why applying margin has no effect*/
+            /* no space is created for the element in the page layout. */
+            /* Important:  */
+            /* It is positioned relative to its closest positioned ancestor if any; otherwise, it is placed relative to the initial containing block*/
+            /* position the element relative to its 1st parent. That's why there is difference between position of 1st & 2nd box even tho top is 250px*/
+            position: absolute;
+            /* margin-top: 250px; */
+            top: 250px;
+            /* left: 250px; */
+            z-index: 2;
+        }
+        #box3{
+            /* The element is positioned according to the normal flow of the document that's why applying margin will result into shifting of entire flow and in-turn affect box 1 with position relative */
+            /* position the element based on users scroll position  */
+            /* eg. box1 is at 150px from top becz of margine. when user scrolls and distance between brwoser window and box 1 becomes 5px box get stick to window from top at 5px for rest of scroll greater that 150px from top  */
+            position: sticky;
+            margin-top: 150px;
+            top: 15px;
+            z-index: 1;
+        }
+        #box4{
+            /* element is removed from the normal document flow that's why applying margin has no effect */
+            /* position the element relative to browser's window  */
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box" id="box1">1 relative</div>
+        <div class="box" id="box2">2 absolute</div>
+        <div class="box" id="box3">3 Sticky</div>
+        <div class="box" id="box4">4 fixed</div>
+    </div>
+</body>
+</html>

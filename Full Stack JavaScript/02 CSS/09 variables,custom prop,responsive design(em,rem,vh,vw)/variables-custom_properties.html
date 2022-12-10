@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables & Custom Properties</title>
+    <style>
+        /* A common best practice is to define custom properties on the :root pseudo-class, so that it can be applied globally across your HTML document: */
+        :root{
+            --box-color: blue;
+            --border-color: rgb(243, 247, 19);
+        }
+        
+        .box{
+            /* custom property declaration */
+            --box-color: orangered;
+
+            text-align: center;
+
+            /* css for vertically centering text  */
+            line-height: 200px;
+            vertical-align: middle;
+
+            background-color: palevioletred;
+
+            /* use of custome variable within scope of box class  */
+            background-color: var(--box-color);
+            
+            border: 2px solid blue;
+            border: 5px solid var(--border-color);
+            margin: 10px;
+            width: 200px;
+            height: 200px;
+        }
+
+        .container{
+            /* thsi will not work if property is not defined in global scope becz var in .box class var(--box-color) has scope of box class */
+            background-color: var(--box-color);
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box" id="box-1">box1</div>
+        <div class="box" id="box-2">box2</div>
+        <div class="box" id="box-3">box3</div>
+    </div>
+</body>
+</html>

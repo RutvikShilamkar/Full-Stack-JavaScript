@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS selectors</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      body {
+        background-color: rgba(75, 73, 73, 0.877);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div>
+      <h3>1. Universal Selector</h3>
+      <p style="width: 100%; height: 20vh; background-color: antiquewhite">
+        This rectangle box has some margine by default. So to change this
+        default css applied on website <b>* universal selctor</b> is used. Lets
+        make default margine and padding 0 for entire webpage. <br /><br />
+        Notice: uncomment universal selector in css file
+      </p>
+    </div>
+    <div>
+      <h3>2. Type Selector</h3>
+      <p>
+        Below image is selected using type selector "img" and with /height is
+        set to 100px
+      </p>
+      <img src="./wallpaper.jpg" alt="image" />
+    </div>
+    <div>
+      <h3>3. class Selector</h3>
+      <p class="rectangle"></p>
+    </div>
+
+    <div>
+      <h3>4. ID Selector</h3>
+      <p id="sqr"></p>
+    </div>
+    <div>
+      <h3>5. Grouping Selector</h3>
+      <span
+        >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus sed
+        accusantium vel aut dignissimos assumenda, unde ab aperiam ipsum animi a
+        in hic cupiditate aliquam commodi, exercitationem officiis quisquam
+        labore voluptatibus perspiciatis earum recusandae sequi error
+        laudantium? Praesentium culpa harum consectetur asperiores earum dicta
+        et. Ea, ipsam. Voluptas ratione expedita blanditiis reiciendis possimus
+        cumque natus ullam reprehenderit. Aliquid magnam facilis id impedit nam
+        magni deserunt? Distinctio praesentium minus eius, dignissimos quae
+        officiis quia impedit, laboriosam quis velit autem enim id!</span
+      >
+      <p class="grouping">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae
+        harum error enim velit pariatur eum molestias deserunt, quam consectetur
+        excepturi.
+      </p>
+      <p id="grp">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, enim.
+      </p>
+    </div>
+
+    <hr />
+    <hr />
+    <hr />
+    <h2 style="text-align: center">Combinators</h2>
+    <br /><br /><br />
+
+    <div>
+      <h3>6. Chained Selector or And Selector</h3>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
+        voluptatem doloremque laudantium eaque officia consectetur, explicabo
+        sed. Ad, obcaecati unde?
+      </p>
+      <p class="background textcolor">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis sit
+        accusamus veritatis quibusdam dolore ab, repellendus repudiandae
+        aperiam. Minus, reiciendis.
+      </p>
+      <p class="border">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe minima
+        modi ad commodi. Voluptatibus sequi pariatur voluptatum corporis, error
+        accusantium!
+      </p>
+    </div>
+
+    <h3>7. Descendant combinator (inside an element)</h3>
+    <div>
+      <ul>
+        <li>li item 1</li>
+        <li>
+          <ul>
+            <li class="text-white">item1</li>
+            <li class="bg-black text-white">item2</li>
+            <li>item3</li>
+            <li>item4</li>
+            <li>item5</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <p>
+      div ul .bg-black.text-white means apply CSS properties on elements which
+      have .bg-black.text-white both the classes (notice and selector because no
+      spaces between classes) which is inside ul element and the same ul element
+      must be inside the div element. Elements just have to be inside other
+      elements
+    </p>
+
+    <h3>8. Child combinator</h3>
+    <div>
+      <ul>
+        <li class="bg-pink text-purple">item6</li>
+        <li class="bg-black">item7</li>
+        <li>item8</li>
+        <li>item9</li>
+        <li>item10</li>
+        <ul>
+          <li class="bg-pink text-purple">item11</li>
+          <li class="bg-black">item12</li>
+          <li>item13</li>
+          <li>item14</li>
+          <li>item15</li>
+        </ul>
+      </ul>
+      <p>
+        item11 &lt;li&gt; is child of &lt;ul&gt; -&gt; is child of another
+        &lt;ul&gt; & not direct child of &lt;div&gt;
+      </p>
+      <b>That's the difference between Descendant Seletor and Child Selector</b>
+    </div>
+
+    <h3>9. General sibling combinator</h3>
+    <div>
+      <div class="container1">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui
+          distinctio sapiente possimus officiis obcaecati quos totam, dolor rem
+          repudiandae eius.
+        </p>
+        <h4>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam,
+          earum!
+        </h4>
+        <span>This is selected and css is applied</span>
+        <b
+          ><i
+            ><p>
+              Here siblings don't have to be immidietly next to each other, but
+              should be sibling i.e. inside same parent element
+            </p></i
+          ></b
+        >
+      </div>
+    </div>
+
+    <h3>10. Adjacent sibling combinator</h3>
+    <div>
+      <div class="container2">
+        <div>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea magni
+          eius iure dignissimos distinctio quas quasi sit ipsam reprehenderit
+          doloremque.
+        </div>
+        <h4>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam,
+          earum!
+        </h4>
+        <p>This paragraph is selected and css is applied</p>
+
+        <h4>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam,
+          earum!
+        </h4>
+        <div>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam
+          laudantium temporibus veritatis consequuntur laborum accusantium.
+          Earum, quas. Nesciunt, perferendis adipisci.
+        </div>
+        <p>
+          <b>
+            <i>
+              this para is not selected because its not immidietly after or
+              adjacent to &lt;h4&gt; tag
+            </i>
+          </b>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

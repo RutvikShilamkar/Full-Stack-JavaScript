@@ -1,0 +1,32 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: gray;
+    font-size: large;
+    font-weight: bolder;
+}
+.container{
+    border: 2px solid black;
+    height: 2000px;
+}
+
+.box{
+    display: inline-block;
+    border: 2px solid red;
+    width: 200px;
+    height: 200px;
+    margin: 4px;
+}
+#box1{
+    background-color: yellow;
+}
+#box2{
+    background-color: blue;
+}
+#box3{
+    background-color: brown;
+}
+#box4{
+    background-color: coral;
+}

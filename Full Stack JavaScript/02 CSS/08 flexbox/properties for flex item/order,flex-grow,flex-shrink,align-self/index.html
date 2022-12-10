@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex item properties</title>
+    <style>
+        body{
+            background-color: rgb(75, 75, 75);
+            color: white;
+        }
+        .container1, .container2, .container3, .container4, .container5, .container6{
+            border: 2px solid black;
+            width: 90vw;
+            height: 50vh;
+            display: flex;
+            /* flex-direction: column; */
+        }
+        .box{
+            background-color: orangered;
+            border: 2px solid rgb(5, 28, 231);
+            width: 100px;
+            height: 100px; 
+            margin: 10px;
+        }
+
+        /* 1 order */
+        .container1 #box-1{
+            order: 2;
+        }
+
+        /* 2 flex-grow */
+        .container2 #box-2{
+            flex-grow: 3;
+        }
+        .container2 #box-1{
+            flex-grow: 2;
+        }
+
+        /* 3 flex-shrink */
+        .container3 .box{
+            width: 500px;
+        }
+        .container3 #box-2{
+            flex-shrink: 3;
+        }
+        .container3 #box-1{
+            flex-shrink: 2;
+        }
+
+        /* 4 flex-basis */
+        .container4 #box-2{
+            flex-basis: 320px;
+        }
+
+        /* 5 flex  */
+        .container5 #box-2{
+            flex-basis: 180px;
+        }
+        .container5 #box-3{
+            flex: 2 2 250px;
+        }
+
+        /* 6 align-self */
+
+        .container6 #box-3{
+            align-self: baseline;
+            align-self: flex-end;
+            align-self: flex-start;
+            align-self: center;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>flex item properties: properties which can be applied on flex items</h1>
+    <h3>1) order: CSS property sets the order to lay out an item in a flex or grid container. Items in a container are sorted by ascending order value and then by their source code order.</h3>
+    <h3>Higher the order later it appears in flex container</h3>
+    <div class="container1">
+        <div class="box" id="box-1">Flex Box 1</div>
+        <div class="box" id="box-2">Flex Box 2</div>
+        <div class="box" id="box-3">Flex Box 3</div>
+    </div>
+    <h3>2) The flex-grow:  CSS property sets the flex grow factor of a flex item's main size</h3>
+    <h3>what is main size?</h3>
+    <h4>if flex-direction = row then main size = width</h4>
+    <h4>if if flex-direction = column then main size = height</h4>
+    <h4>uncomment flex-direction: column; in .container3 selector</h4>
+    <div class="container2">
+        <div class="box" id="box-1">Flex Box 1</div>
+        <div class="box" id="box-2">Flex Box 2</div>
+        <div class="box" id="box-3">Flex Box 3</div>
+    </div>
+
+    <h3>3) The flex-shrink: CSS property sets the flex shrink factor of a flex item. If the size of all flex items is larger than the flex container, items shrink to fit according to flex-shrink.</h3>
+    <h4>if flex-direction = row then width will be affected</h4>
+    <h4>if if flex-direction = column height will be affected</h4>
+    <h4>uncomment flex-direction: column; in .container2 selector</h4>
+    <div class="container3">
+        <div class="box" id="box-1">Flex Box 1</div>
+        <div class="box" id="box-2">Flex Box 2</div>
+        <div class="box" id="box-3">Flex Box 3</div>
+    </div>
+
+    <h3>4) The flex-basis: CSS property sets the initial main size of a flex item. It sets the size of the content box unless otherwise set with box-sizing.</h3>
+    <h4>if flex-direction = row then width will be affected</h4>
+    <h4>if if flex-direction = column height will be affected</h4>
+    <h4>uncomment flex-direction: column; in .container4 selector</h4>
+    <div class="container4">
+        <div class="box" id="box-1">Flex Box 1</div>
+        <div class="box" id="box-2">Flex Box 2</div>
+        <div class="box" id="box-3">Flex Box 3</div>
+    </div>
+
+    <h3>5) flex shorthand</h3>
+    <h4>flex: flex-grow flex-shrink flex-basis</h4>
+    <h4>valid value are 0 or greater than 0</h4>
+    <div class="container5">
+        <div class="box" id="box-1">Flex Box 1</div>
+        <div class="box" id="box-2">Flex Box 2</div>
+        <div class="box" id="box-3">Flex Box 3</div>
+    </div>
+
+    <h3>6) The align-self: CSS property overrides a grid or flex item's align-items value. In Grid, it aligns the item inside the grid area. In Flexbox, it aligns the item on the cross axis.</h3>
+    <div class="container6">
+        <div class="box" id="box-1">Flex Box 1</div>
+        <div class="box" id="box-2">Flex Box 2</div>
+        <div class="box" id="box-3">Flex Box 3</div>
+    </div>
+</body>
+</html>
