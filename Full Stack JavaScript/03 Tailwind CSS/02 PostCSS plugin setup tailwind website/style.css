@@ -1,2 +1,5 @@
 /* You can not modify anything in the HTML */
 /* You can only modify the CSS file */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
