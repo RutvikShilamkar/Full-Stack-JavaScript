@@ -1,0 +1,53 @@
+To set up Tailwind CSS for production, you have to execute the below set of commands:
+
+npm init -y
+This command will initialize the directory as a NodeJS project.
+
+npm install -D tailwindcss postcss autoprefixer vite
+This command will install the required packages.
+
+npx tailwindcss init-p
+The execution of this command will generate the configure file of Tailwind CSS.
+
+ 
+
+Create an “Input.css” file
+Add below text to your HTML and edit it with the below piece of content:
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities; 
+
+In the tailwind.config.js file, You have to replace “content: []” with “content: [“*”]”.
+Moreover, You have to add “start”: “vite” to your scripts in package.json.
+Finally, you have to run the npm run start command to start a dev server.
+
+ 
+theme: {
+    extend: {
+      fontFamily:{
+        poppins: "'Poppins', sans-serif",
+      },
+      backgroundImage:{
+        backplanecity: "url('/assets/bg.png')",
+      },
+      backgroundSize:{
+        '30%':'30%',
+      },
+      width:{
+        block:'42.5rem',
+      },
+    },
+  },
+
+
+1) bg-[url('/assets/bg.png')] bg-[length:100%_150%] bg-black
+
+2) flex justify-start 
+
+3) border-x border-l-0 border-x-white rounded-md
+
+4) font-poppins font-medium text-2xl
+
+5) after:content-['_&#x2304;'] "_" will add blank space
