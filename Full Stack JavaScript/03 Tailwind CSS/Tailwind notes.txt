@@ -1,29 +1,42 @@
 To set up Tailwind CSS for production, you have to execute the below set of commands:
 
-npm init -y
+1) npm init -y
 This command will initialize the directory as a NodeJS project.
 
-npm install -D tailwindcss postcss autoprefixer vite
+2) npm install -D tailwindcss postcss autoprefixer vite
 This command will install the required packages.
 
-npx tailwindcss init-p
+3) npx tailwindcss init -p
 The execution of this command will generate the configure file of Tailwind CSS.
 
- 
-
-Create an “Input.css” file
-Add below text to your HTML and edit it with the below piece of content:
+4) Create an “Input.css” file
+******ADD "Input.css" FILE TO YOUR HTML****** and edit css file with the below piece of content:
 @tailwind base;
 
 @tailwind components;
 
 @tailwind utilities; 
 
-In the tailwind.config.js file, You have to replace “content: []” with “content: [“*”]”.
-Moreover, You have to add “start”: “vite” to your scripts in package.json.
+5) In the tailwind.config.js file, You have to replace “content: []” with “content: [“*”]”.
+
+6) Moreover, You have to add “start”: “vite” to your scripts in package.json.
+
+7) npm run start
 Finally, you have to run the npm run start command to start a dev server.
 
- 
+########################################################################################
+
+8)npx tailwindcss init --full or npx tailwindcss init customFileName --full
+ -To scaffold a complete configuration file that includes all of Tailwind’s default configuration, use the --full option
+-This file can be used to extend custom properties in tailwing.config.js file.
+-If properties are added inside theme they will be overriding existing configuration
+-If added insite theme>extend then they will be added to configuration
+
+########################################################################################
+
+# error "hover class not defined" while using @apply then remove space between hover: and property
+
+########################################################################################
 theme: {
     extend: {
       fontFamily:{
@@ -41,7 +54,7 @@ theme: {
     },
   },
 
-
+########################################################################################
 1) bg-[url('/assets/bg.png')] bg-[length:100%_150%] bg-black
 
 2) flex justify-start 
