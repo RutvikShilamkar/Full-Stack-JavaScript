@@ -1,0 +1,116 @@
+/* You can not modify anything in the HTML */
+/* You can only modify the CSS file */
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    margin: auto;
+    width: 90vw;
+    /* width: 1400px; */
+    /* position: relative; */
+}
+.navbar-container{
+    display: flex;
+    margin: 50px auto;
+    /* width: 90%; */
+    /* border: 2px solid black; */
+    align-items: center;
+    /* justify-content: space-between; */
+    justify-content: flex-start;
+    position: relative;
+}
+
+/* logo  */
+.navbar-container img{
+    height: 40px;
+}
+
+/* nav list */
+.list{
+    margin-left: 40px;
+    display: flex;
+    /* border: 2px solid rgb(46, 255, 27); */
+    /* width: 50vw; */
+    justify-content: flex-start;
+}
+.list-item{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    color: gray;
+    opacity: 0.5;
+    list-style: none;
+    /* border: 1px solid red; */
+    padding: 10px 15px;
+}
+.list-item:first-child{
+    color: black;
+    opacity: 1;
+}
+
+/* nav-button */
+.button-group{
+    /* border: 2px solid peru; */
+    /* width: 30vw; */
+    /* display: flex;
+    justify-content: flex-end; */
+    position: absolute;
+    right: 55px;
+}
+.nav-button{
+    background-color: #6767cf;
+    color: #fff;
+    padding: 15px 35px;
+    border: 1px solid #6767cf;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+/* banner */
+.banner-container{
+    display: flex;
+    font-family: 'Poppins', sans-serif;
+    /* margin-left: 65px; */
+}
+
+/* Left text */
+.heading-text{
+    margin-top: 90px;
+    width: 400px;
+    font-weight: 700;
+    font-size: 60px;
+}
+.heading-text span{
+    color: #6767cf;
+}
+.description{
+    margin-top: 20px;
+    width: 400px;
+}
+.banner-container .btn{
+    margin-top: 50px;
+    margin-left: 10px;
+    padding: 20px 50px;
+}
+/* Right Text */
+.banner-container img{
+    position: absolute;
+    right: 0;
+}
+
+/* to avoid distortion in layout */
+@media (min-width: 1500px){
+    .container{
+        width: 1375px;
+        position: relative;
+    }
+    .navbar-container{
+        width: 90%;
+    }
+    .banner-container{
+        margin-left: 65px;
+    }
+    /* body{
+        background-color: yellow;
+    } */
+}

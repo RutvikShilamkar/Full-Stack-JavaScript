@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imp title attribute</title>
+    <!-- role of title attribute in link tag or external css : -->
+    <!-- The title attribute has special semantics on the <link> element. When used on a <link rel="stylesheet"> it defines a default or an alternate stylesheet. -->
+
+
+    <link href="reset.css" rel="stylesheet" />
+
+    <link href="default.css" rel="stylesheet" title="Default Style" />
+    <link href="fancy.css" rel="alternate stylesheet" title="Fancy" />
+    <link href="basic.css" rel="alternate stylesheet" title="Basic" />
+    <!-- In this example, the styles "Default Style", "Fancy", and "Basic" will be listed in the Page Style submenu, with
+    "Default Style" pre-selected. When the user selects a different style, the page will immediately be re-rendered
+    using that style sheet.
+
+    No matter what style is selected, the rules from the reset.css stylesheet will always be applied. -->
+
+    <!-- Persistent (no rel="stylesheet", no title=""): always applies to the document.
+    Preferred (no rel="stylesheet", with title="…" specified): applied by default, but disabled if an alternate stylesheet is selected. There can only be one preferred stylesheet, so providing stylesheets with       different title attributes will cause some of them to be ignored.
+    Alternate (rel="alternate stylesheet", title="…" must be specified): disabled by default, can be selected. -->
+</head>
+
+<body>
+    <!-- representing advisory information related to the element it belongs to. -->
+    <!-- when you hover over element containing non empty title attribute you will see its content  -->
+    <div title="CoolTip">
+        <p>Hovering here will show "CoolTip".</p>
+        <p title="">Hovering here will show nothing.</p>
+    </div>
+
+    <!-- code tag displays its contents styled in a fashion intended to indicate that the text is a short fragment of computer code. -->
+    <!-- text is displayed as code by applying some effec -->
+    <!-- notice how "title and iframe" words are rendered -->
+    <p>Use the <code>title</code> attribute on an <code>iframe</code> to clearly identify the content of the
+        <code>iframe</code> to <b>screen readers / assistive technology</b>.
+    </p>
+
+    <!-- iframe element represents a nested browsing context, embedding another HTML page into the current one. -->
+    <!-- using this you can browse another html page into current html page -->
+    <iframe title="Wikipedia page for the HTML language" src="https://en.m.wikipedia.org/wiki/HTML"
+        width="500"></iframe>
+    <iframe title="Wikipedia page for the CSS language" src="https://en.m.wikipedia.org/wiki/CSS"></iframe>
+
+</body>
+
+</html>
