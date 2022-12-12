@@ -34,6 +34,16 @@ Finally, you have to run the npm run start command to start a dev server.
 
 ########################################################################################
 
+9)Build & Deploy website 
+	i)in package.json add script => "build": "vite build" 
+	 	execute the npm run build command to execute the process of building the application for production. 
+		
+	ii)As a result, the application will be built inside a ‘dist’ folder. Which has index.html and in asset folder it has minimal css, pictures. 
+	iii) Upload 'dist' folder on git or any hosting website to host it.
+
+
+########################################################################################
+
 # error "hover class not defined" while using @apply then remove space between hover: and property
 
 ########################################################################################
