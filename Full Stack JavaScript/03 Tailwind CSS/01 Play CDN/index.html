@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Play CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Tailwind Play CDN</title>
+</head>
+<body>
+    <section aria-label="navbar">
+        <nav class="navbar-container px-4 py-4 bg-purple-400 text-white">
+            <div class="nav-list">
+                <ul class="flex">
+                    <li class="list mx-12 cursor-pointer">Home</li>
+                    <li class="list mx-12 cursor-pointer">Services</li>
+                    <li class="list mx-12 cursor-pointer">About</li>
+                    <li class="list mx-12 cursor-pointer">Contact</li>
+                </ul>
+            </div>
+        </nav>
+    </section>
+    <section aria-label="header">
+        <header class="heading-container my-12">
+            <h3 class="text-3xl font-bold underline text-blue-900">Use the Play CDN to try Tailwind right in the browser without any build step. The Play CDN is designed for development purposes only, and is not the best choice for production.</h3>
+        </header>
+    </section>
+    <section aria-label="notes">
+        <div class="notes-container mx-12">
+            <ol>
+                <li>-see classes applied on html elements</li>
+                <li>-use quick search option on tailwind website to see if classes exist or not. for example if you want margin and my-12 class. Search margin to confirm class my-12 exist or not.</li>
+                <br>
+                <li>##For production use PostCSS plugin and not PlayCDN
+                    
+                    <li>- do plugin setup as per <a class="underline text-blue-900" href="https://tailwindcss.com/docs/installation/using-postcss">Tailwind website</a> </li>
+                    <li>Steps & commands</li>
+                    <li>1) Install node js first & restart PC</li>
+                    <li>2) Open terminal in vs code and type command: 
+                        <li class="text-2xl">"npm init"</li> The npm init command is a step-by-step tool to scaffold out your project. It will prompt you for input for a few aspects of the project 
+                    </li>
+                    <li class="text-2xl"> or npm init -y (y means yes to all)</li>
+                    <li>Is this OK? (yes) : type yes</li>
+                    <li>3) We want to use Tailwind CSS in the production of our application, therefore we would install the Tailwind with the help of Post CSS, Vite, and Autoprefixer. To install Tailwind for production, simply execute the below command in the Terminal- </li>
+                    <li class="text-2xl">"npm install -D tailwindcss postcss autoprefixer"</li>
+                    <li >4)Installing Vite: After executing the above command, Install Vite with the help of the below command. In package.json, make sure to add a script section to run vite whenever npm start is executed. </li>
+                    <li class="text-2xl">"npx tailwindcss vite"</li>
+                    <li>5) Initialising TailwindFinally, for the initialization of the Tailwind, you have to use the below command</li>
+                    <li class="text-2xl">"npx tailwindcss init"</li>
+                    <li> After the execution of the above command, a Tailwind.config.js file will be created. Make sure to add a “*” in the content section as we will be using the Tailwind in the complete content.</li>
+                    <li class="text-2xl">6) "npm run start"</li>
+                    <li>click on localhost link to open website</li>
+                </li>
+            </ol>
+        </div>
+    </section>
+</body>
+</html>
