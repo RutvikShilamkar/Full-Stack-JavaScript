@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+
+.btn {
+  @apply my-12 bg-transparent px-9 rounded-lg py-1 border-2 border-black outline-dashed outline-2 outline-offset-1 hover:bg-yellow-300 hover:ring-2;
+}
+
+@tailwind utilities;
+
+/* This will add colorText class after components classes and before btn class */
+/* @layer components{
+    .colorText{
+        @apply text-white;
+    }
+} */
+
+/* This will add colorText class after utilities classes and btn class will be added before utilities classes */
+@layer utilities{
+    .colorText{
+        @apply text-white;
+    }
+}

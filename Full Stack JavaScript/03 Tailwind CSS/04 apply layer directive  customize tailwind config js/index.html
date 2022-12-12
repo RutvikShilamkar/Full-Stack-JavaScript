@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Apply & layer Directive</title>
+</head>
+<body>
+    <div class="container w-60 m-auto my-28">
+        <button type="button" class="btn">Button 1</button>
+
+        <!-- here text-black comes before class colorText defined in style.css  -->
+        <!-- in style.css if utilities are after custom classes then their properties have upper hand. Therefore, text will be black  -->
+        <!-- if custome class is difined after utilities then it will be applied. i.e. white color text  -->
+        <button type="button" class="btn outline-none bg-purple-400 hover:bg-purple-600 focus:ring-yellow-400 text-black colorText">Button 1</button>
+
+        <!-- npx tailwindcss init --full or npx tailwindcss init customFileName --full
+        -To scaffold a complete configuration file that includes all of Tailwind’s default configuration, use the --full option
+        -This file can be used to extend custom properties in tailwing.config.js file.
+        -If properties are added inside theme they will be overriding existing configuration
+        -If added insite theme>extend then they will be added to configuration -->
+    </div>
+</body>
+</html>
