@@ -1,11 +1,11 @@
-/* Universal Selector*/
+/* 1. Universal Selector*/
 /* used to apply css properties to entire web page  */
 /* *{
     margin: 0;
     padding: 0;
 } */
 
-/* Type Selector */
+/* 2. Type Selector */
 /* html tag name is used to apply css to all elements with same tag name */
 /* all images will have 100x100 size */
 img {
@@ -13,21 +13,21 @@ img {
   height: 100px;
 }
 
-/* Class Selector */
+/* 3. Class Selector */
 .rectangle {
   background-color: aquamarine;
   width: 100%;
   height: 20vh;
 }
 
-/* ID Selector  */
+/* 4. ID Selector  */
 #sqr {
   background-color: #6a1b4d;
   height: 200px;
   width: 200px;
 }
 
-/* Grouping Selector  */
+/* 5. Grouping Selector  */
 span,
 .grouping,
 #grp {
@@ -36,7 +36,7 @@ span,
 
 /* ############################################################################# */
 
-/* Chained Selector or And Selector */
+/* 6. Chained Selector or And Selector */
 .background.textcolor {
   background-color: aliceblue;
   color: royalblue;
@@ -46,7 +46,7 @@ p.border {
   border: 2px solid red;
 }
 
-/* Descendant combinator (inside an element) */
+/* 7. Descendant combinator (inside an element) */
 div ul .bg-black.text-white {
   background-color: #0d0d0d;
   color: #ffffff;
@@ -61,14 +61,45 @@ div > ul > .bg-pink.text-purple {
 }
 
 /* 9. General sibling combinator  */
-
+/* Here siblings don't have to be immidietly next to each other, but should be sibling i.e. inside same parent element */
 p ~ span {
   color: #ff0000b4;
   background-color: #0a0a07;
 }
-/* Here siblings don't have to be immidietly next to each other, but should be sibling i.e. inside same parent element */
 
+/* 10. Adjacent sibling combinator */
+/* The + combinator matches the second element only if it immediately follows the first element. */
 h4+p{
     color: #62fd6f;
     background-color: #1132ec;
+}
+
+/*11 attribute selectors */
+input[type='text']{
+  background-color: aquamarine;
+  color: red;
+  padding: 30px;
+  text-align: center;
+}
+
+input[type='button']{
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: 2px solid blue;
+  background-color: antiquewhite;
+}
+
+input[type='submit']{
+  padding: 5px 30px;
+  border: 2px solid #ff000096;
+}
+
+a[target]{
+  background-color: #00000028;
+  padding: 10px;
+}
+
+a[target='_self']{
+  background-color: #90f8f8;
+  padding: 10px;
 }
