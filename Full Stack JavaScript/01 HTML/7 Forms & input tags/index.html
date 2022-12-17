@@ -9,6 +9,12 @@
 </head>
 
 <body>
+    <form oninput="result.value=parseInt(a.value)+parseInt(b.value)">
+        <!-- value="10" & in output 20 are default values -->
+        <input type="number" id="b" name="b" value="10" /> +
+        <input type="number" id="a" name="a" value="10" /> =
+        <output name="result" for="a b">20</output>
+    </form>
     <form action="backendOfApplication.java">
         <div>
             <label for="find">Search</label>
@@ -31,12 +37,15 @@
         <br>
         <div>
             <label for="course">Course type:</label>
-            <label for="MS">MS</label>
-            <input type="radio" name="course" value="MS" id="MS" checked> 
-            <label for="BE">BE</label>
-            <input type="radio" name="course" value="BE" id="BE">
-            <label for="Other">Other</label>
-            <input type="radio" name="course" value="Ot" id="Other">
+            <label for="MS">
+            <input type="radio" name="course" value="MS" id="MS" checked>MS
+            </label>
+            <label for="BE">
+            <input type="radio" name="course" value="BE" id="BE">BE
+            </label>
+            <label for="Other">
+            <input type="radio" name="course" value="Ot" id="Other">Other
+        </label>
         </div>
         <br>
         <div>
@@ -83,7 +92,7 @@
         <br>
         <div>
             <label for="sub">Submit Button with image as background : </label>
-            <input type="image" src="./img.jpg" alt="submit image error" width="80" height="20">
+            <input type="image" src="./img.jpg" alt="submit image error" width="80" height="20" id="sub">
         </div>
     </form>
 </body>
