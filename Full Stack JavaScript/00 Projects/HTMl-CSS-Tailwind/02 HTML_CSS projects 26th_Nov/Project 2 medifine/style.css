@@ -1,0 +1,130 @@
+html{
+    box-sizing: border-box;
+}
+
+*,*::before,*::after{
+    box-sizing: inherit;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container{
+    width: 85vw;
+    margin: 1.75rem auto 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+/* <!-- Navbar Section  --> */
+.navbar-container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 1.75rem;
+}
+
+.list{
+    list-style: none;
+    display: flex;
+    min-width: max-content;
+    flex-wrap: wrap;
+}
+
+.list li{
+    margin: 0 2em;
+    font-weight: bold;
+}
+
+.list li:first-child{
+    color: #52b370;
+}
+
+/* <!-- Navbar Section End --> */
+
+/* <!-- Hero Banner Section Start-->  */
+
+.hero-container{
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 80vh;
+}
+
+.hero-container>*{
+    flex: 1;
+}
+
+/* hero-container-left */
+.hero-container-left{
+    display: flex;
+    /* flex-wrap: wrap; */
+    flex-direction: column;
+    justify-content: center;
+    /* border: 2px solid black; */
+    position: relative;
+}
+.hero-heading{
+    font-size: 3.5em;
+    margin: 1rem 0;
+    max-width: 575px;
+}
+
+.hero-description{
+    max-width: 580px;
+}
+
+.button-appointment{
+    background-color: #52b370;
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 10px 30px;
+    border: 2px solid #52b370;
+    border-radius: 25px;
+}
+
+.btn{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.stethoscope{
+    position: absolute;
+    width: 90%;
+    top: -5%;
+    left: 40%;
+}
+
+/* hero-container-right  */
+.hero-container-right{
+    /* display: flex; */
+    /* border: 2px solid red; */
+    position: relative;
+}
+
+.green-box img{
+    position: absolute;
+    width: 65%;
+    bottom: 8%;
+    right: -5vw;
+}
+
+.yellow-box img{
+    position: absolute;
+    width: 65%;
+    bottom: 2%;
+    right: -7.5vw;
+}
+
+.doctor img{
+    position: absolute;
+    width: 65%;
+    bottom: 0;
+    right: -5vw;
+}
+
+.mouse{
+    position: absolute;
+    left: 5%;
+    bottom: 15%;
+}
