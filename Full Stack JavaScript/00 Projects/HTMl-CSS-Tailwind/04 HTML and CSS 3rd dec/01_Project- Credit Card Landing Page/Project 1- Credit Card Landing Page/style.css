@@ -1,0 +1,452 @@
+html{
+    box-sizing: border-box;
+}
+
+*,*::before,*::after{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+.container{
+    max-width: 90vw;
+    margin: 0 auto;
+}
+
+.text-pink{
+    color: #F637EC;
+    font-weight: 500;
+}
+
+/* navbar container  */
+.navbar-container{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.navbar-container>*{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* navbar list  */
+.list{
+    display: flex;
+    flex-wrap: wrap;
+}
+.list li{
+    list-style: none;
+    padding: 10px;
+    margin: 0 15px;
+}
+
+/* navbar buttons  */
+.nav-buttons select, .nav-buttons button{
+    padding: 10px;
+    background-color: #000000;
+    border: none;
+    color: #ffffff;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+}
+
+.nav-buttons select{
+    padding: 1rem 1.5rem;
+    border: 0;
+}
+
+.custom-select{
+    position: relative;
+    display: flex;
+}
+
+/* for different styling of dropdown arrow */
+.custom-arrow{
+    position: absolute;
+    width: 2rem;
+    height: 100%;
+    background-color: #000000 ;
+    top: 0;
+    right: 0;
+    pointer-events: none;
+}
+
+.custom-arrow::before,
+.custom-arrow::after{
+    --size: .3rem;
+
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* this creates triangle  */
+.custom-arrow::before{
+    border-left: var(--size) solid transparent;
+    border-right: var(--size) solid transparent;
+    border-top: var(--size) solid #ffffff;
+}
+
+/* contact us button img  */
+button.btn.nav-button::before{
+    content: url('./Assets/Icons/btn-pink-bg.svg');
+    position: relative;    
+    left: 20px;
+    top: 5px;
+}
+
+/* navbar section end  */
+
+/* 1st hero section  */
+.hero-container{
+    height: max-content;
+    padding: 3rem 0;
+}
+
+/* hero heading  */
+.hero-heading{
+    width: 75%;
+    font-size: 75px;
+    margin: 1.5rem 0;
+}
+
+/* discription */
+.hero-discription{
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 1.25rem;
+    max-width: 615px;
+    margin: 2rem 0;
+}
+
+/* get started button  */
+.btn.btn-hero{
+    background-color: #000000;
+    color: #ffffff;
+    border: 0;
+    font-size: 1.5rem;
+    position: relative;
+    left: 30px;
+    letter-spacing: 2px;
+    margin: 4rem 0;
+}
+
+button.btn.btn-hero::before{
+    background-image: url('./Assets/Icons/btn-pink-bg.svg');
+    background-repeat: no-repeat;
+    background-size: 60px;
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+    content: '';
+    position: absolute;
+    left: -30px;
+    top: 7px;
+}
+
+button.btn.btn-hero::after{
+    background-image: url('./Assets/Icons/RightArrow.svg');
+    background-repeat: no-repeat;
+    background-size: 60px;
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+    content: '';
+    position: relative;
+    left: 10px;
+    top: 14px;
+}
+
+/* cards images  */
+.back-card{
+    position: absolute;
+    right: 20px;
+    top: 40px;
+}
+
+.front-card{
+    position: absolute;
+    right: -235px;
+    top: 110px;
+    opacity: 1;
+}
+
+/* site statistics  */
+
+.h1{
+    font-size: 3.5rem;
+}
+
+.hero-count{
+    display: flex;
+    gap: 70px;
+}
+
+.hero-count>*{
+    /* flex: 1; */
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.active-users::after{
+    content: '';
+    height: 40%;
+    width: 3px;
+    background: linear-gradient(to top,black, gray, black);
+    position: relative;
+    left: 30px;
+}
+
+/* brands  */
+.brands-container{
+    width: 100vw;
+    margin: auto;
+    height: 40vh;
+    background-color: rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.brands-container img{
+    flex: 1;
+    flex-grow: 0;
+    /* margin: 0 3vw; */
+}
+
+@media(min-width: 1430px){
+    .navbar-container, .nav-buttons select, .nav-buttons button{
+        font-size: 1.5rem !important;
+    }
+    .hero-heading{
+        font-size: 6.75rem;
+        width: 80%;
+    }
+
+    .custom-arrow::before,
+    .custom-arrow::after{
+        --size: .4rem;
+    }
+
+    .btn.btn-hero{
+        font-size: 2rem;
+        margin: 5rem 0;
+    }
+}
+
+/* services  */
+.services-container{
+    padding: 3rem 0;
+    text-align: center;
+}
+
+.services-container .title{
+    font-size: 3.5rem;
+    width: min(55%, 675px);
+    display: inline-block;
+    text-align: start;
+}
+
+.services-container .description{
+    display: inline-block;
+    width: min(40%, 490px) ;
+    position: relative;
+    bottom: 100px;
+    color: rgba(255, 255, 255, 0.6);
+    text-align: start;
+}
+
+.services-cards{
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    padding: 3rem 0;
+}
+
+.card{
+    border: 2px solid #ffffff;
+    border-image-source: linear-gradient(-45deg,  black, gray);
+    border-image-slice: 1;
+
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    background-color: rgba(255, 255, 255, 0.1);
+
+    padding-top: 20px;
+}
+
+.services-cards .card img{
+    width: 40%;
+}
+
+#card-2{
+    /* border-image-source: linear-gradient(135deg,  #141414, #525252); */
+    border-image-source: linear-gradient(-45deg, black, white);
+    border-image-slice: 1;
+    background-image: linear-gradient(135deg, #3f3f3f, #696969);
+
+    position: relative;
+    bottom: 30px;
+}
+
+/* card-choice-container  */
+.card-choice-container{
+    text-align: center;
+    background-color: #ffffff;
+    color: #000000;
+    padding: 4.2rem 0;
+}
+
+.card-choice-container .title{
+    font-size: 3.5rem;
+    width: min(60%, 700px);
+    margin: auto;
+}
+
+.card-choice-container .description{
+    font-size: 1.2rem;
+    width: min(60%, 700px);
+    margin: 3.2rem auto;
+}
+
+.card-choice-container img{
+    position: relative;
+    bottom: 5.5rem;
+}
+
+/* review-container */
+
+.review-container{
+    text-align: center;
+    margin: 5.5rem auto;
+}
+
+.review-container .title{
+    font-size: 3.5rem;
+    width: min(70%, 900px);
+    margin: 1.5rem auto;
+}
+
+.review-container .description{
+    font-size: 1.2rem;
+    width: min(50%, 600px);
+    margin: 1.5rem auto;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.review-container .cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem;
+    margin: 5.5rem auto;
+}
+
+.cards .card{
+    padding: 30px;
+    text-align: start;
+    flex-basis: 40%;
+    align-items: flex-start;
+}
+
+#review-1{
+    border-image-source: linear-gradient(-45deg, black, white);
+    border-image-slice: 1;
+    background-image: linear-gradient(135deg, #3f3f3f, #696969);
+}
+
+
+.scroll-item{
+    display: inline-block;
+    border: 4px solid rgba(246, 55, 236, 0.5);
+    border-radius: 3px;
+    width: .5rem;
+}
+
+.scroll-item:first-child{
+    border-radius: 3px;
+    border: 4px solid #F637EC;
+    width: 2.5rem;
+}
+
+/* .getstarted-conatiner */
+.getstarted-conatiner{
+    text-align: center;
+    position: relative;
+}
+
+.getstarted-conatiner .title{
+    font-size: 3.5rem;
+    width: min(60%,900px);
+    margin: auto;
+    padding-top: 7rem;
+}
+
+.black{
+    color: #000000;
+}
+
+.getstarted-conatiner img{
+    position: absolute;
+    width: 100vw;
+    height: min(70vh, 600px);
+    top: 0;
+    left: 0;
+    z-index: -5;
+}
+
+.getstarted-conatiner::before{
+    content: url('./Assets/Photos/Diamond-right.png');
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.getstarted-conatiner::after{
+    content: url('./Assets/Photos/Diamond-left.png');
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.getstarted-conatiner .btn.btn-hero{
+    background-color: transparent;
+}
+
+/* footer */
+
+.footer{
+    margin: 10rem auto 5rem;
+    padding: 3rem 2rem;
+    height: 20vh;
+
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.footer img{
+    position: absolute;
+    left: 5vw;
+    top: 40%;
+}
