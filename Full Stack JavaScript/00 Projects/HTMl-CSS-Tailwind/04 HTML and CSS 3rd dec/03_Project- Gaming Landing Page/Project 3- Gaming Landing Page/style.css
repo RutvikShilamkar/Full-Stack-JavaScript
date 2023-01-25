@@ -1,0 +1,540 @@
+/* font-family: 'Poppins', sans-serif; */
+
+html{
+    box-sizing: border-box;
+}
+
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+img{
+    max-width: 100%;
+}
+
+.container{
+    width: 85%;
+    margin: 0 auto;
+}
+
+
+/* hero section background  */
+.wrapper{
+    min-height: 100vh;
+    background-image: url('./Assets/Photos/futuristic-bg.png');
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: cover;
+    z-index: -1;
+    color: #fff;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 3em 0 7em;
+}
+
+/* navbar section start  */
+.navbar{
+    display: flex;
+    gap: 7em;
+}
+
+.logo img{
+    height: 100%;
+    min-width: max-content;
+}
+
+.list{
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    font-size: clamp(1rem, 1vw + 0.1rem, 2rem);
+}
+
+.navbar ul{
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.list-item{
+    padding: .5rem 1rem;
+    color: #dddddd;
+    cursor: pointer;
+}
+
+ul.list__secondary{
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.btn{
+    padding: .5em 2em;
+    border: 0;
+    background-color: transparent;
+    color: white;
+}
+
+.btn-solid{
+    background-color: #F4694C;
+    color: #fff;
+    font-weight: 600;
+}
+
+/* navbar section end  */
+
+
+/* hero section start  */
+.hero{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 3rem 0;
+    position: relative;
+    gap: 2rem;
+}
+
+/* hero left container  */
+
+.hero__title{
+    font-size: clamp(2rem, 2vw + 1.5rem, 4rem);
+}
+
+.hero__description{
+    font-size: clamp(0.5rem, 1vw + 0.1rem, 2rem);
+    color: #dddddd;
+    margin: 2em 0;
+}
+
+.hero__buttons .btn{
+    font-size: clamp(1rem, 1vw + 0.3rem, 2rem);
+}
+
+.hero__buttons .btn:last-child{
+    margin-left: 1rem;
+    border: 1px solid #E6E6E6;
+}
+
+/* hero right container  */
+
+.hero__right{
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    position: relative;
+}
+
+.hero__img{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.hero_right--text{
+    font-size: clamp(1.5rem, 1vw + 1rem, 2.5rem);
+    position: relative;
+    bottom: -3em;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+.dash{
+    align-self: start;
+}
+
+/* popular-games */
+.popular-games{
+    padding: 5em 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: flex-end;
+}
+
+.popular-games_title{
+    font-size: clamp(2rem, 1vw + 1.25rem, 4rem);
+    font-weight: 600;
+    text-align: center;
+    padding: 2em 0;
+}
+
+.game-cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 1rem;
+
+    color: #fff;
+}
+
+.game-card{
+    flex: 1;
+    height: 45vh;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+
+.game-card .row{
+    flex: 1;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: .5rem;
+    bottom: 0;
+    
+    background-color: rgb(85, 90, 89,.3);
+    backdrop-filter: blur(10px); 
+    height: 30%;
+}
+
+.game_name{
+    font-size: clamp(0.9rem, 0.9vw + 0.1rem, 1.5rem);
+}
+
+.game_category{
+    font-size: clamp(0.8rem, 0.9vw + 0.1rem, 1rem);
+
+}
+
+.game-card .rating{
+    background-image: url("./Assets/Icons/Star\ 1.svg");
+    background-repeat: space;
+    width: 71.9px;
+    height: 12px;
+}
+
+.game-card .row .col:last-child{
+    justify-self: center;
+}
+
+.game-card .btn-solid{
+    font-size: clamp(0.8rem, 0.9vw + 0.1rem, 1.5rem);
+    padding: 0.5em 1em;
+    margin-right: 0;
+    cursor: pointer;
+}
+
+.game-card:nth-child(1){
+    background-image: url("./Assets/Photos/image\ 2.png");
+    background-size: cover;
+    background-position: center;
+}
+.game-card:nth-child(2){
+    background-image: url("./Assets/Photos/image\ 4.png");
+    background-size: cover;
+    background-position: center;
+}
+.game-card:nth-child(3){
+    background-image: url("./Assets/Photos/image\ 3.png");
+    background-size: cover;
+    background-position: center;
+}
+.game-card:nth-child(4){
+    background-image: url("./Assets/Photos/Rectangle\ 56.png");
+    background-size: cover;
+    background-position: center;
+}
+
+/* promo */
+
+.promo{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+.promo .container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 5rem;
+}
+
+.promo--img{
+    flex: 1;
+    height: 60vh;
+    background-image: url('./Assets/Photos/Rectangle\ 57.png');
+    background-position: center center;
+    background-size: cover;
+    min-width: 400px;
+}
+
+.promo--info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.promo_title{
+    font-size: clamp(1.5rem, 2vw + 0.7rem, 3rem);
+}
+
+.promo_description{
+    font-size: clamp(1rem, 1vw + 0.1rem, 2rem);
+    color: #908887;
+}
+
+.promo_btns button{
+    font-size: clamp(1rem, 1vw + .2rem, 2rem);
+    padding: 0.8em 2em;
+    border: 1px solid #F4694C;
+}
+
+.promo_btns .btn:last-child{
+    color: #F4694C;
+    margin-left: 1em;
+}
+
+/* recommended games for week  */
+.rec_games{
+    padding: 3rem 0 10rem;
+}
+
+.rec_game--header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 3em;
+}
+
+.rec_game--title{
+    font-size: clamp(2rem, 1.25vw + 1.25rem, 3rem);
+}
+
+.arrow_img{
+    display: flex;
+    gap: 1rem;
+}
+
+.arrow_img > *{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.arrow_img .left,.arrow_img .right{
+    background-color: #FDE1DB;
+    width: 4em;
+    height: 4em;
+    align-self: center;
+}
+.arrow_img .right{
+    background-color: #F4694C;
+
+}
+
+.game_title{
+    font-size: clamp(1rem, 1vw + 0.5rem, 2rem);
+    font-weight: 600;
+}
+
+.game_catag{
+    color: #F4694C;
+}
+
+.game_description{
+    color: #908887;
+    font-size: clamp(0.5rem, 0.8vw + 0.1rem, 2rem);
+    padding-bottom: 1rem;
+}
+
+.game_card .btn{
+    font-size: clamp(1rem, 1vw + 0.2rem, 2rem);
+    font-weight: 500;
+    padding: 1em 2em;
+}
+
+.cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+}
+
+.game_card{
+    display: grid;
+    grid-template-columns: 1fr 1.25fr;
+    gap: 2rem;
+}
+
+.game_card .game_img{
+    height: 40vh;
+    background-position: center center;
+    background-size: cover;
+}
+
+.game_img-1{
+    background-image: url('./Assets/Photos/Rectangle\ 75.png');
+}
+.game_img-2{
+    background-image: url('./Assets/Photos/Rectangle\ 76.png');
+}
+.game_img-3{
+    background-image: url('./Assets/Photos/Rectangle\ 77.png');
+}
+.game_img-4{
+    background-image: url('./Assets/Photos/Rectangle\ 78.png');
+}
+
+.game_info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+/* <!-- most played games  --> */
+
+.mpg{
+    background-color: #000;
+    padding: 4rem 0;
+
+    background-image: url('./Assets/Icons/GAMES\ OF\ THE\ WORLD.svg');
+    background-position: 125% 40%;
+    background-repeat:  no-repeat;
+}
+
+.mpg_title{
+    font-size: clamp(2rem, 1.25vw + 1.25rem, 3rem);
+    color: #fff;
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+.mpg_description{
+    font-size: clamp(0.5rem, 0.8vw + 0.2rem, 2rem);
+    color: #908887;
+}
+
+.mpg_body{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 4rem;
+}
+
+.mpg_body--left{
+    flex: 1;
+}
+
+.mpg_body--right{
+    flex: 1.5;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.mpg-imgs{
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+    align-items: flex-end;
+}
+
+.mpg-imgs > *{
+    flex: 1;
+}
+
+
+/* get_started */
+
+.get_started{
+    background-color: #000;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.7)), url('./Assets/Photos/Rectangle\ 606.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    /* filter: brightness(50%); */
+}
+
+.get_started .container{
+    height: 70vh;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.get_started .mpg_title{
+    margin-bottom: 1rem;
+}
+
+.get_started button{
+    padding: 1em 2em;
+    margin: 2rem auto 1rem;
+}
+
+footer{
+    background-color: #000;
+    padding: 3rem 0;
+    color: #908887;
+}
+
+footer .promo_description{
+    font-weight: 400;
+    color: #fff;
+}
+
+footer p{
+    font-size: clamp(0.5rem, 0.1vw + 0.9rem, 1.25rem);
+}
+
+footer .container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.social_medias{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+footer .container > *{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+footer .promo_description{
+    margin-bottom: 1rem;
+}
+
+hr{
+    margin: 3rem 0;
+}
+
+
+@media (max-width: 725px){
+    .list__primary{
+        display: none !important;
+    }
+
+    .game_card{
+        grid-template-columns: 1fr;
+    }
+    .mpg_body{
+        flex-direction: column;
+    }
+}
